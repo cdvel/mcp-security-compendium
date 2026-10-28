@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.6.0",
+  "id": "GHSA-4cxx-hrm3-49rm",
+  "aliases": [
+    "CVE-2025-54135"
+  ],
+  "summary": "Arbitrary code execution from Cursor Agent through a prompt injection via MCP Special Files",
+  "details": "## Summary\r\nCursor allows writing in-workspace files with no user approval. If the file is a dotfile, editing it requires approval but creating one if it doesn't exists doesn't. Hence, if sensitive MCP files, such as the .cursor/mcp.json file don't already exist in the workspace, an attacker can chain a indirect prompt injection vulnerability to hijack the context to write to the settings file and trigger RCE on the victim without user approval.\r\n\r\n## Impact\r\nIf chained with a separate prompt injection vulnerability, this could allow the writing of sensitive MCP files on the host by the agent. This can then be used to directly execute code by adding it as a new MCP server.\r\n\r\n## Remediation\r\nThe agent has been blocked from writing MCP-sensitive files without approval.",
+  "published": "2025-08-02T01:11:11Z",
+  "modified": "2025-08-02T01:11:11Z",
+  "affected": [
+    {
+      "package": {
+        "name": "Cursor"
+      }
+    }
+  ],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/cursor/cursor/security/advisories/GHSA-4cxx-hrm3-49rm"
+    }
+  ],
+  "database_specific": {
+    "severity": "HIGH",
+    "source": "GitHub repository advisory (cursor/cursor); not in OSV",
+    "component": "clients_and_hosts"
+  }
+}

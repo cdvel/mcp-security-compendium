@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.6.0",
+  "id": "GHSA-xcwh-rrwj-gxc7",
+  "aliases": [
+    "CVE-2025-59944"
+  ],
+  "summary": "Cursor IDE - Sensitive File Overwrite Bypass",
+  "details": "### Summary\r\nA set of case-sensitive checks in the way Cursor IDE protects its sensitive files (i.e. */.cursor/mcp.json) allows attackers to modify the content of the files through prompt injection, thus achieving remote code execution.\r\n\r\n### Impact\r\nA prompt injection can now lead to full RCE through modifying sensitive files on case-insensitive fileystems\r\n\r\n### Remediations\r\nThe checks were changed to be case insensitive",
+  "published": "2025-10-02T23:48:28Z",
+  "modified": "2025-10-02T23:48:28Z",
+  "affected": [
+    {
+      "package": {
+        "name": "Cursor"
+      }
+    }
+  ],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/cursor/cursor/security/advisories/GHSA-xcwh-rrwj-gxc7"
+    }
+  ],
+  "database_specific": {
+    "severity": "HIGH",
+    "source": "GitHub repository advisory (cursor/cursor); not in OSV",
+    "component": "clients_and_hosts"
+  }
+}

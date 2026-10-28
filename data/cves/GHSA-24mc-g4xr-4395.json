@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.6.0",
+  "id": "GHSA-24mc-g4xr-4395",
+  "aliases": [
+    "CVE-2025-54136"
+  ],
+  "summary": "Modification of MCP Server Definitions Bypasses Manual Re-approval",
+  "details": "### Summary\r\nA vulnerability in Cursor AI allows an attacker to achieve remote and persistent code execution by modifying an already trusted MCP configuration file inside a shared GitHub repository or editing the file locally on the target's machine. Once a collaborator accepts a harmless MCP, the attacker can silently swap it for a malicious command (e.g., calc.exe) without triggering any warning or re-prompt.\r\n\r\n### Impact\r\nIf an attacker has write permissions on a user's active branches of a source repository that contains existing MCP servers the user has previously approved, or allows an attacker has arbitrary file-write locally, the attacker can achieve arbitrary code execution.\r\n\r\n### Remediation\r\nCursor now requires user approval every time an mcpServer entry is modified (in addition to the existing behavior of asking for approval when a new server is added).\r\n",
+  "published": "2025-08-01T17:25:29Z",
+  "modified": "2025-08-01T17:25:29Z",
+  "affected": [
+    {
+      "package": {
+        "name": "Cursor"
+      }
+    }
+  ],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/cursor/cursor/security/advisories/GHSA-24mc-g4xr-4395"
+    }
+  ],
+  "database_specific": {
+    "severity": "HIGH",
+    "source": "GitHub repository advisory (cursor/cursor); not in OSV",
+    "component": "clients_and_hosts"
+  }
+}
