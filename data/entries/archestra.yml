@@ -1,0 +1,14 @@
+title: Archestra
+url: https://github.com/archestra-ai/archestra
+author: Archestra
+org: Archestra
+author_kind: vendor_lab
+published: 2025-07-15
+added: 2026-10-28
+last_verified: 2026-10-28
+source_type: primary
+section: gateways_and_proxies
+kind: tool
+signals: [contributors, active]
+threats: [T1, T4, T2]
+description: Open-core (AGPL-3.0 and enterprise) platform with an MCP gateway supporting OAuth and on-behalf-of authentication, a private MCP registry, a Kubernetes MCP orchestrator and tool-call guardrail policies.

@@ -1,0 +1,14 @@
+title: Microsoft MCP Gateway
+url: https://github.com/microsoft/mcp-gateway
+author: Microsoft
+org: Microsoft
+author_kind: vendor_lab
+published: 2025-05-14
+added: 2026-10-28
+last_verified: 2026-10-28
+source_type: primary
+section: gateways_and_proxies
+kind: tool
+signals: [stars, contributors, security_policy]
+threats: [T1, T2]
+description: Reverse proxy and management layer for MCP servers on Kubernetes with request routing, authorization and server lifecycle management; current version supports only 2026-07-28 spec clients.

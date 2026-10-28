@@ -1,0 +1,14 @@
+title: Pipelock
+url: https://github.com/pipelab-org/pipelock
+author: PipeLab
+org: PipeLab
+author_kind: independent
+published: 2026-02-08
+added: 2026-10-28
+last_verified: 2026-10-28
+source_type: primary
+section: gateways_and_proxies
+kind: tool
+signals: [contributors, active, security_policy]
+threats: [T5, T4, T12]
+description: Open-core egress proxy and MCP wrapper that scans agent HTTP, MCP, A2A and WebSocket traffic for secret exfiltration, SSRF and prompt injection, and writes signed receipts of its decisions.

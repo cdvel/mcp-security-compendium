@@ -1,0 +1,17 @@
+title: Docker MCP Gateway
+url: https://github.com/docker/mcp-gateway
+author: Docker
+org: Docker
+author_kind: vendor_lab
+published: 2025-04-22
+added: 2026-10-28
+last_verified: 2026-10-28
+source_type: primary
+section: gateways_and_proxies
+kind: tool
+signals: [stars, contributors, active, cve, security_policy]
+threats: [T8, T11, T5]
+sources:
+  - https://github.com/advisories/GHSA-46gc-mwh4-cc5r
+  - https://github.com/advisories/GHSA-r2xf-7jw5-pjg6
+description: Docker CLI plugin that runs MCP servers in isolated containers behind one gateway, with image signature verification, network blocking, scoped secrets and tool-call interceptors.

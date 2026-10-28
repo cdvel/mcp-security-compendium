@@ -1,0 +1,14 @@
+title: Lasso MCP Gateway
+url: https://github.com/lasso-security/mcp-gateway
+author: Lasso Security
+org: Lasso Security
+author_kind: vendor_lab
+published: 2025-04-14
+added: 2026-10-28
+last_verified: 2026-10-28
+source_type: primary
+section: gateways_and_proxies
+kind: tool
+signals: [stars, contributors]
+threats: [T5, T11, T3]
+description: Plugin-based gateway that proxies other MCP servers, with guardrail plugins such as token masking and a scanner that checks server reputation before loading.

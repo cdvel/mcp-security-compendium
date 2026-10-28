@@ -1,0 +1,14 @@
+title: MCP Gateway & Registry
+url: https://github.com/agentic-community/mcp-gateway-registry
+author: agentic-community
+org: agentic-community
+author_kind: project_maintainers
+published: 2025-05-29
+added: 2026-10-28
+last_verified: 2026-10-28
+source_type: primary
+section: gateways_and_proxies
+kind: tool
+signals: [stars, contributors, active, security_policy]
+threats: [T1, T2, T12]
+description: Gateway and registry that centralizes access to MCP servers with OAuth authentication through Keycloak or Entra ID, tool discovery and audit logging, with deployment guides for AWS.
