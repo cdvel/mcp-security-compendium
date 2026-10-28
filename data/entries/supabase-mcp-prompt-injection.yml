@@ -1,0 +1,16 @@
+title: "Supabase MCP Security: How Prompt Injection Leaked Private Tables"
+url: https://generalanalysis.com/blog/supabase-mcp-blog
+author: Rez Havaei; Rex Liu; Maximilian Li
+org: General Analysis
+author_kind: research_lab
+published: 2025-07-08
+added: 2026-10-28
+last_verified: 2026-10-28
+source_type: primary
+section: incidents
+kind: writeup
+signals: [research_lab]
+threats: [T4, T5, T2]
+sources:
+  - https://supabase.com/blog/defense-in-depth-mcp
+description: Demonstration that a prompt-injected support ticket can make an agent using the Supabase MCP server with a service-role key leak private tables; Supabase's later defense-in-depth post is linked.

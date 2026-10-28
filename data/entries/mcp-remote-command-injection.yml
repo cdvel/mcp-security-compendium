@@ -1,0 +1,17 @@
+title: OS command injection in mcp-remote when connecting to untrusted MCP servers (JFSA-2025-001290844)
+url: https://research.jfrog.com/vulnerabilities/mcp-remote-command-injection-rce-jfsa-2025-001290844/
+author: Or Peles
+org: JFrog Security Research
+author_kind: vendor_lab
+published: 2025-07-09
+added: 2026-10-28
+last_verified: 2026-10-28
+source_type: primary
+section: incidents
+kind: advisory
+signals: [research_lab, cve]
+threats: [T3, T1]
+sources:
+  - https://jfrog.com/blog/2025-6514-critical-mcp-remote-rce-vulnerability/
+  - https://github.com/advisories/GHSA-6xpm-ggf7-wc3p
+description: Advisory for CVE-2025-6514, where mcp-remote passed a server-supplied OAuth authorization_endpoint to the system opener, letting an untrusted MCP server run OS commands on the client.

@@ -1,0 +1,17 @@
+title: "CurXecute: Cursor RCE via prompt-injected mcp.json (CVE-2025-54135)"
+url: https://github.com/cursor/cursor/security/advisories/GHSA-4cxx-hrm3-49rm
+author: Cursor
+org: Anysphere
+author_kind: vendor_lab
+published: 2025-08-02
+added: 2026-10-28
+last_verified: 2026-10-28
+source_type: primary
+section: incidents
+kind: advisory
+signals: [cve]
+threats: [T4, T9]
+sources:
+  - https://web.archive.org/web/20250801170149/https://www.aim.security/lp/aim-labs-curxecute-blogpost
+  - https://thehackernews.com/2025/08/cursor-ai-code-editor-fixed-flaw.html
+description: Advisory for CVE-2025-54135, where Cursor let the agent create a missing .cursor/mcp.json without approval, so prompt injection could add and auto-run an attacker MCP server.

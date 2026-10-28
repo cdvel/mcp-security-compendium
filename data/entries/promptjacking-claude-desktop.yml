@@ -1,0 +1,14 @@
+title: "PromptJacking: The Critical RCEs in Claude Desktop That Turn Questions Into Exploits"
+url: https://web.archive.org/web/20251105031627/https://www.koi.ai/blog/promptjacking-the-critical-rce-in-claude-desktop-that-turn-questions-into-exploits
+author: Oren Yomtov
+org: Koi Security
+author_kind: vendor_lab
+published: 2025-11-04
+added: 2026-10-28
+last_verified: 2026-10-28
+source_type: primary
+section: incidents
+kind: writeup
+signals: [research_lab]
+threats: [T3, T4]
+description: Archived Koi disclosure of command injection in Anthropic's Chrome, iMessage and Apple Notes Claude Desktop extensions (packaged MCP servers), where unsanitized input reached AppleScript; no CVE.

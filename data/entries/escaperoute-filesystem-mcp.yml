@@ -1,0 +1,17 @@
+title: "EscapeRoute: Breaking the Scope of Anthropic's Filesystem MCP Server (CVE-2025-53109/53110)"
+url: https://cymulate.com/blog/cve-2025-53109-53110-escaperoute-anthropic/
+author: Elad Beber
+org: Cymulate
+author_kind: vendor_lab
+published: 2025-07-02
+added: 2026-10-28
+last_verified: 2026-10-28
+source_type: primary
+section: incidents
+kind: writeup
+signals: [research_lab, cve]
+threats: [T2, T3]
+sources:
+  - https://github.com/advisories/GHSA-q66q-fx2p-7w4m
+  - https://github.com/advisories/GHSA-hc55-p739-j48w
+description: Write-up of CVE-2025-53109 and CVE-2025-53110, symlink and path-prefix bypasses that let the official Filesystem MCP server read and write outside its allowed directories.
