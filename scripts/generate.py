@@ -28,7 +28,7 @@ Loader.yaml_implicit_resolvers = {
 
 AUTHOR_KIND = {
     "research_lab": "research",
-    "vendor_lab": "vendor research",
+    "vendor_lab": "vendor",
     "academic": "academic",
     "standards_body": "standards body",
     "project_maintainers": "maintainers",
@@ -56,14 +56,19 @@ def load_cves():
     return sorted(cves, key=lambda c: c.get("published", ""), reverse=True)
 
 
+def who(e):
+    name = e["author"].replace("; ", ", ")
+    if e.get("org") and e["org"] not in e["author"]:
+        name += f" ({e['org']})"
+    return name
+
+
 def by_line(e):
-    who = e["author"]
-    if e.get("org") and e["org"] != e["author"]:
-        who += f" ({e['org']})"
     tags = [AUTHOR_KIND[e["author_kind"]]] if e["author_kind"] != "independent" else []
-    tags += [e["kind"]] + e.get("threats", []) + e.get("tags", [])
+    threats = sorted(e.get("threats", []), key=lambda t: int(t[1:]))
+    tags += [e["kind"]] + threats + e.get("tags", [])
     tag_str = " ".join(f"`{t}`" for t in tags)
-    return f"- [{e['title']}]({e['url']}) by {who} · {e['published']} · {e['description']} {tag_str}".rstrip()
+    return f"- [{e['title']}]({e['url']}) by {who(e)} · {e['published']} · {e['description']} {tag_str}".rstrip()
 
 
 def advisory_url(c):
@@ -110,7 +115,7 @@ def render(sections, entries, cves):
         out.append(f"- [{t}](#{anchor(t)})" + (f" ({n})" if n else ""))
     out.append("")
     if start:
-        out += ["## Start here", ""] + [by_line(e) for e in start] + [""]
+        out += ["## Start here", ""] + [f"- [{e['title']}]({e['url']}) by {who(e)}" for e in start] + [""]
     for s in sections:
         items = sorted((e for e in entries if e["section"] == s["id"]), key=lambda e: e["published"], reverse=True)
         out += [f"## {s['title']}", "", s["summary"], ""]
