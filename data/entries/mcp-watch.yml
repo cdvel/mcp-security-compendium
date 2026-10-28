@@ -1,0 +1,13 @@
+title: mcp-watch
+url: https://github.com/kapilduraphe/mcp-watch
+author: Kapil Duraphe
+author_kind: independent
+published: "2025-05-29"
+added: "2026-10-28"
+last_verified: "2026-10-28"
+source_type: primary
+section: servers
+kind: tool
+signals: [stars, contributors]
+threats: [T4, T3, T5]
+description: Pattern-based static scanner for MCP server code and tool definitions that flags hardcoded credentials, tool poisoning, parameter and prompt injection, ANSI escapes and input-validation issues.

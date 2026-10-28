@@ -1,0 +1,16 @@
+title: Ramparts
+url: https://github.com/highflame-ai/ramparts
+author: Highflame
+org: Highflame
+author_kind: vendor_lab
+published: "2025-07-23"
+added: "2026-10-28"
+last_verified: "2026-10-28"
+source_type: primary
+section: servers
+kind: tool
+signals: [contributors, active]
+threats: [T4, T11]
+sources:
+  - https://www.highflame.com/blog/ramparts-mcp-scan
+description: Rust scanner for MCP servers and agent skill files using YARA rules, optional LLM analysis, cross-origin tool checks and OSV.dev lookups for stdio server packages.

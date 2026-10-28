@@ -1,0 +1,18 @@
+title: FastMCP authentication and middleware
+url: https://gofastmcp.com/servers/auth/authentication
+author: Jeremiah Lowin
+org: Prefect
+author_kind: project_maintainers
+published: "2024-11-30"
+added: "2026-10-28"
+last_verified: "2026-10-28"
+source_type: primary
+section: servers
+kind: guide
+signals: [stars, contributors, active, security_policy]
+threats: [T1, T2, T10]
+sources:
+  - https://github.com/PrefectHQ/fastmcp
+  - https://gofastmcp.com/servers/authorization
+  - https://gofastmcp.com/servers/middleware
+description: FastMCP server auth (JWT token verification, remote OAuth, OAuth and OIDC proxies, full OAuth server, authorization) and middleware such as rate limiting; some providers rely on DCR, deprecated in the 2026-07-28 spec.
