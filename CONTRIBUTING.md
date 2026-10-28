@@ -8,7 +8,7 @@ Out of scope: general prompt injection or LLM security not tied to MCP, director
 
 ## Classification
 
-Sections are by component: Specification and authorization; Clients and hosts; Servers; Gateways and proxies; Registries and supply chain; Detection and monitoring; Threat models and research; Incidents. An entry goes in the section of the component it mainly acts on. Material that spans components goes in *Threat models and research*.
+Sections are by component: Specification and authorization; Clients and hosts; Servers; Gateways and proxies; Registries and supply chain; Threat models and research; Incidents. An entry goes in the section of the component it mainly acts on; runtime monitoring and audit tools go in *Gateways and proxies*. Material that spans components goes in *Threat models and research*.
 
 Entries are also tagged with [CoSAI MCP threat categories](https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf) `T1`–`T12` where they apply.
 
@@ -29,6 +29,10 @@ An entry needs **one strong signal or two supporting signals**, plus at least on
 The star threshold is lower than the 500 used for older topics because MCP tooling dates from late 2024.
 
 Not accepted: vendor marketing, gated content, AI-generated listicles, unverified claims, duplicates, and projects archived or without commits for 12 months (unless listed in `data/exemptions.yml`).
+
+## CVE tracker
+
+Advisories in MCP SDKs, servers, clients and gateways are included. Advisories in general agent tools are included only when the root cause is in MCP handling: configuration, transport, authorization or tool output.
 
 ## Attribution
 
