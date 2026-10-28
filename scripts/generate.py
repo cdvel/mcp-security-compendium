@@ -8,6 +8,7 @@ import json
 import sys
 from collections import Counter
 from pathlib import Path
+from urllib.parse import urlparse
 
 import jsonschema
 import yaml
@@ -69,28 +70,56 @@ def by_line(e):
     threats = sorted(e.get("threats", []), key=lambda t: int(t[1:]))
     tags += [e["kind"]] + threats + e.get("tags", [])
     tag_str = " ".join(f"`{t}`" for t in tags)
-    return f"- [{e['title']}]({e['url']}) by {who(e)} · {e['published']} · {e['description']} {tag_str}".rstrip()
+    also = ", ".join(f"[{site(u)}]({u})" for u in e.get("sources", []))
+    also = f" Also: {also}." if also else ""
+    return f"- [{e['title']}]({e['url']}) by {who(e)} · {e['published']} · {e['description']}{also} {tag_str}".rstrip()
+
+
+def site(url):
+    host = urlparse(url).netloc.removeprefix("www.")
+    if host == "web.archive.org":
+        return "archived copy"
+    if host == "github.com" and "/advisories/" in url:
+        return url.rstrip("/").rsplit("/", 1)[-1]
+    return host
 
 
 def advisory_url(c):
-    refs = [r["url"] for r in c.get("references", []) if r.get("type") == "ADVISORY"]
-    ghsa = [u for u in refs if "github.com/" in u and "/advisories/" in u]
-    if ghsa:
-        return ghsa[0]
-    if c["id"].startswith(("GHSA-", "MAL-", "GO-", "PYSEC-")):
-        return f"https://osv.dev/vulnerability/{c['id']}"
-    return refs[0] if refs else ""
+    """OSV page for every record; repository-only advisories (not in OSV) link to their own page."""
+    if "not in OSV" in c.get("database_specific", {}).get("source", ""):
+        return next((r["url"] for r in c.get("references", []) if r.get("type") == "ADVISORY"), "")
+    return f"https://osv.dev/vulnerability/{c['id']}"
 
 
 def cve_row(c, titles):
     db = c.get("database_specific", {})
-    aliases = ", ".join(a for a in c.get("aliases", []) if a != c["id"])
+    aliases = ", ".join(a for a in c.get("aliases", []) if a.startswith("CVE-"))
     pkgs = ", ".join(sorted({a["package"]["name"] for a in c.get("affected", []) if "package" in a}))
     sev = db.get("severity", "").lower()
     ref = advisory_url(c)
     component = titles.get(db.get("component", ""), "")
     ident = f"[{c['id']}]({ref})" if ref else c["id"]
-    return f"| {ident} | {aliases} | {pkgs} | {component} | {sev} | {c.get('published', '')[:10]} | {c.get('summary', '')} |"
+    return f"| {ident} | {aliases} | {pkgs} | {component} | {sev} | {c.get('published', '')[:10]} | {db.get('summary_short') or c.get('summary', '')} |"
+
+
+GLOSSARY = [
+    "<details>",
+    "<summary>Terms and threat tags</summary>",
+    "",
+    "- **CIMD:** OAuth Client ID Metadata Document, a URL that identifies an OAuth client; preferred for client registration in the 2026-07-28 spec.",
+    "- **DCR:** OAuth Dynamic Client Registration (RFC 7591), deprecated in the 2026-07-28 spec.",
+    "- **PRM:** OAuth Protected Resource Metadata (RFC 9728), how an MCP server names its authorization server.",
+    "- **DNS rebinding:** a web page reaching a server on localhost by changing what its domain resolves to.",
+    "- **Tool poisoning:** instructions hidden in tool descriptions or output that an agent follows.",
+    "- **CoSAI threat tags:** "
+    "`T1` authentication and identity, `T2` access control, `T3` input validation, "
+    "`T4` instruction and data boundary (prompt injection), `T5` data protection, `T6` integrity and verification, "
+    "`T7` session and transport, `T8` network binding and isolation, `T9` trust boundaries and privilege, "
+    "`T10` resource limits, `T11` supply chain and lifecycle, `T12` logging and audit.",
+    "",
+    "</details>",
+    "",
+]
 
 
 def anchor(title):
@@ -104,15 +133,18 @@ def render(sections, entries, cves):
         "Curated, sourced resources on Model Context Protocol security, organized by component. "
         "Every entry names its author and links a primary source; inclusion rules are in "
         "[CONTRIBUTING.md](CONTRIBUTING.md). Threat tags `T1`–`T12` refer to the "
-        "[CoSAI MCP security taxonomy](https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf).",
+        "[CoSAI MCP security taxonomy](https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf). "
+        "How entries are found and checked is in [METHODOLOGY.md](METHODOLOGY.md).",
         "",
-    ]
+    ] + GLOSSARY
     counts = Counter(e["section"] for e in entries)
     start = [e for e in entries if e.get("start_here")]
     toc = (["Start here"] if start else []) + [s["title"] for s in sections] + (["CVE tracker"] if cves else [])
     out += ["## Contents", ""]
     for t in toc:
         n = next((counts[s["id"]] for s in sections if s["title"] == t), None)
+        if t == "CVE tracker":
+            n = len(cves)
         out.append(f"- [{t}](#{anchor(t)})" + (f" ({n})" if n else ""))
     out.append("")
     if start:
