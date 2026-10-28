@@ -66,14 +66,25 @@ def by_line(e):
     return f"- [{e['title']}]({e['url']}) by {who} · {e['published']} · {e['description']} {tag_str}".rstrip()
 
 
-def cve_row(c):
+def advisory_url(c):
+    refs = [r["url"] for r in c.get("references", []) if r.get("type") == "ADVISORY"]
+    ghsa = [u for u in refs if "github.com/" in u and "/advisories/" in u]
+    if ghsa:
+        return ghsa[0]
+    if c["id"].startswith(("GHSA-", "MAL-", "GO-", "PYSEC-")):
+        return f"https://osv.dev/vulnerability/{c['id']}"
+    return refs[0] if refs else ""
+
+
+def cve_row(c, titles):
     db = c.get("database_specific", {})
     aliases = ", ".join(a for a in c.get("aliases", []) if a != c["id"])
     pkgs = ", ".join(sorted({a["package"]["name"] for a in c.get("affected", []) if "package" in a}))
-    sev = db.get("severity", "")
-    ref = next((r["url"] for r in c.get("references", []) if r.get("type") == "ADVISORY"), "")
+    sev = db.get("severity", "").lower()
+    ref = advisory_url(c)
+    component = titles.get(db.get("component", ""), "")
     ident = f"[{c['id']}]({ref})" if ref else c["id"]
-    return f"| {ident} | {aliases} | {pkgs} | {db.get('component', '')} | {sev} | {c.get('published', '')[:10]} | {c.get('summary', '')} |"
+    return f"| {ident} | {aliases} | {pkgs} | {component} | {sev} | {c.get('published', '')[:10]} | {c.get('summary', '')} |"
 
 
 def anchor(title):
@@ -113,7 +124,7 @@ def render(sections, entries, cves):
             "",
             "| ID | Aliases | Package | Component | Severity | Published | Summary |",
             "|---|---|---|---|---|---|---|",
-        ] + [cve_row(c) for c in cves] + [""]
+        ] + [cve_row(c, {s['id']: s['title'] for s in sections}) for c in cves] + [""]
     verified = max((e["last_verified"] for e in entries), default="never")
     out += ["---", "", f"Last verified {verified}. Generated from `data/` by `scripts/generate.py`; do not edit by hand.", ""]
     return "\n".join(out)
