@@ -1,0 +1,16 @@
+title: Model Context Protocol (MCP) Security
+url: https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf
+author: 'CoSAI Workstream 4: Secure Design Patterns for Agentic Systems'
+org: Coalition for Secure AI (OASIS)
+author_kind: standards_body
+published: '2026-01-08'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: taxonomy
+start_here: true
+signals:
+- standards_body
+- cited_by_strong
+description: CoSAI threat model for MCP deployments defining twelve threat categories (MCP-T1 to MCP-T12) and mapping them to controls such as agent identity, delegation, sandboxing, transport security and logging.

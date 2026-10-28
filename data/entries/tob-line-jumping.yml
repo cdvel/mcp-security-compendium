@@ -1,0 +1,16 @@
+title: 'Jumping the line: How MCP servers can attack you before you ever use them'
+url: https://blog.trailofbits.com/2025/04/21/jumping-the-line-how-mcp-servers-can-attack-you-before-you-ever-use-them/
+author: Trail of Bits
+org: Trail of Bits
+author_kind: research_lab
+published: '2025-04-21'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: writeup
+signals:
+- research_lab
+threats:
+- T4
+description: Trail of Bits write-up on line jumping, where a malicious MCP server injects instructions through tool descriptions that take effect as soon as tools are listed, before any tool is called.

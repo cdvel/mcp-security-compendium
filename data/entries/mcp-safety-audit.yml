@@ -1,0 +1,19 @@
+title: 'MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits'
+url: https://arxiv.org/abs/2504.03767
+author: Brandon Radosevich; John T. Halloran
+org: Leidos
+author_kind: research_lab
+published: '2025-04-02'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: paper
+signals:
+- paper_with_code
+threats:
+- T4
+- T9
+sources:
+- https://github.com/johnhalloran321/mcpSafetyScanner
+description: Preprint showing LLMs coerced through MCP tools into code execution, remote access and credential theft, and introducing McpSafetyScanner, an agent-based MCP server auditing tool.

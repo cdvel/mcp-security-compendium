@@ -1,0 +1,17 @@
+title: New Prompt Injection Attack Vectors Through MCP Sampling
+url: https://unit42.paloaltonetworks.com/model-context-protocol-attack-vectors/
+author: Yongzhe Huang; Akshata Rao; Changjiang Li; Yang Ji; Wenjun Hu
+org: Palo Alto Networks Unit 42
+author_kind: vendor_lab
+published: '2025-12-05'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: writeup
+signals:
+- research_lab
+threats:
+- T4
+- T10
+description: Unit 42 proof-of-concept attacks in which a malicious MCP server abuses the sampling feature in a coding copilot; sampling is deprecated in the 2026-07-28 spec.

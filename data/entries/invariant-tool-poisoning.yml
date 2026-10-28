@@ -1,0 +1,17 @@
+title: 'MCP Security Notification: Tool Poisoning Attacks'
+url: https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks
+author: Luca Beurer-Kellner; Marc Fischer
+org: Invariant Labs
+author_kind: research_lab
+published: '2025-04-01'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: writeup
+start_here: true
+signals:
+- research_lab
+threats:
+- T4
+description: 'Invariant Labs disclosure that introduced the term tool poisoning: hidden instructions in MCP tool descriptions that make an agent exfiltrate data or misuse other servers'' tools.'

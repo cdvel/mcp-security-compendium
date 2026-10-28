@@ -1,0 +1,20 @@
+title: 'MCPTox: A Benchmark for Tool Poisoning Attack on Real-World MCP Servers'
+url: https://arxiv.org/abs/2508.14925
+author: Zhiqiang Wang; Yichao Gao; Yanting Wang; Suyuan Liu; Haifeng Sun; Haoran Cheng; Guanquan Shi; Haohua Du; Xiang-Yang Li
+org: University of Science and Technology of China; Beihang University
+author_kind: academic
+published: '2025-08-19'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: paper
+signals:
+- paper
+- paper_with_code
+threats:
+- T4
+sources:
+- https://github.com/zhiqiangwang4/MCPTox-Benchmark
+- https://doi.org/10.1609/aaai.v40i42.40895
+description: AAAI 2026 benchmark of 1,348 tool poisoning test cases built on 45 live MCP servers and 353 tools, evaluated against 20 LLM agent settings.

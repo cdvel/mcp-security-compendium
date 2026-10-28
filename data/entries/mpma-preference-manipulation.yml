@@ -1,0 +1,18 @@
+title: 'MPMA: Preference Manipulation Attack Against Model Context Protocol'
+url: https://arxiv.org/abs/2505.11154
+author: Zihan Wang; Rui Zhang; Yu Liu; Wenshu Fan; Wenbo Jiang; Qingchuan Zhao; Hongwei Li; Guowen Xu
+org: University of Electronic Science and Technology of China; City University of Hong Kong
+author_kind: academic
+published: '2025-05-16'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: paper
+signals:
+- paper
+threats:
+- T4
+sources:
+- https://doi.org/10.1609/aaai.v40i42.40898
+description: AAAI 2026 paper on attacks where a malicious MCP server edits tool names and descriptions, including with a genetic algorithm for stealth, so LLMs choose it over competing servers.

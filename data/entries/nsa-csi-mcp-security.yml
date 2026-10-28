@@ -1,0 +1,16 @@
+title: 'Model Context Protocol (MCP): Security Design Considerations for AI-Driven Automation'
+url: https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf
+author: National Security Agency
+org: NSA
+author_kind: standards_body
+published: 2026-05
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: guide
+signals:
+- standards_body
+sources:
+- https://web.archive.org/web/20260520161722/https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf
+description: NSA Cybersecurity Information sheet on observed MCP security concerns, such as code execution through unconstrained inputs and token and session weaknesses, with recommendations for production deployments.

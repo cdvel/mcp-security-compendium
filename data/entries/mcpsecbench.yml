@@ -1,0 +1,20 @@
+title: 'MCPSecBench: A Systematic Security Benchmark and Playground for Testing Model Context Protocols'
+url: https://arxiv.org/abs/2508.13220
+author: Yixuan Yang; Cuifeng Gao; Daoyuan Wu; Yufan Chen; Yingjiu Li; Shuai Wang
+org: Lingnan University
+author_kind: academic
+published: '2025-08-17'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: paper
+signals:
+- paper_with_code
+threats:
+- T4
+- T7
+- T8
+sources:
+- https://github.com/AIS2Lab/MCPSecBench
+description: Preprint benchmark covering 17 attack types across client, protocol, server and host surfaces, evaluated against Claude Desktop, OpenAI and Cursor hosts.

@@ -1,0 +1,20 @@
+title: 'Model Context Protocol (MCP): Landscape, Security Threats, and Future Research Directions'
+url: https://arxiv.org/abs/2503.23278
+author: Xinyi Hou; Yanjie Zhao; Shenao Wang; Haoyu Wang
+org: Huazhong University of Science and Technology
+author_kind: academic
+published: '2025-03-30'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: paper
+signals:
+- paper
+- paper_with_code
+threats:
+- T11
+sources:
+- https://doi.org/10.1145/3796519
+- https://github.com/security-pride/MCP_Landscape
+description: Survey defining a four-phase MCP server lifecycle and a threat taxonomy of 16 scenarios across four attacker types, with per-phase safeguards; published in ACM TOSEM.

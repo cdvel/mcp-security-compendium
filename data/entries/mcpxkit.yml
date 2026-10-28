@@ -1,0 +1,18 @@
+title: 'MCPXKIT: The Unified Toolkit for Analyzing Model Context Protocol Security'
+url: https://arxiv.org/abs/2508.12538
+author: Yongjian Guo; Puzhuo Liu; Wanlun Ma; Zehang Deng; Xiaogang Zhu; Peng Di; Xi Xiao; Sheng Wen
+org: Tsinghua University; Ant Group; Swinburne University of Technology
+author_kind: academic
+published: '2025-08-18'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: paper
+signals:
+- paper
+threats:
+- T4
+sources:
+- https://doi.org/10.1109/tdsc.2026.3695553
+description: IEEE TDSC paper implementing 31 MCP attack methods in four classes (direct and indirect tool injection, malicious user, LLM inherent) and measuring their success rates.

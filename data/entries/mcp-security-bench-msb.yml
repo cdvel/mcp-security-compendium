@@ -1,0 +1,19 @@
+title: 'MCP Security Bench (MSB): Benchmarking Attacks Against Model Context Protocol in LLM Agents'
+url: https://arxiv.org/abs/2510.15994
+author: Dongsen Zhang; Zekun Li; Xu Luo; Xuannan Liu; Peipei Li; Wenjun Xu
+org: Beijing University of Posts and Telecommunications; University of California, Santa Barbara
+author_kind: academic
+published: '2025-10-14'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: research
+kind: paper
+signals:
+- paper
+- paper_with_code
+threats:
+- T4
+sources:
+- https://github.com/dongsenzhang/MSB
+description: ICLR 2026 benchmark of 12 MCP attack types across planning, invocation and response handling, run with real tools over MCP against ten LLM agents.
