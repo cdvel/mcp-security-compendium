@@ -1,17 +1,17 @@
-title: "Cursor IDE: Persistent Code Execution via MCP Trust Bypass (CVE-2025-54136, MCPoison)"
-url: https://blog.checkpoint.com/research/cursor-ide-persistent-code-execution-via-mcp-trust-bypass/
-author: Check Point Research
+title: 'Cursor IDE: Persistent Code Execution via MCP Trust Bypass (CVE-2025-54136, MCPoison)'
+url: https://research.checkpoint.com/2025/cursor-vulnerability-mcpoison/
+author: Andrey Charikov; Roman Zaikin; Oded Vanunu
 org: Check Point
 author_kind: vendor_lab
-published: 2025-08-05
-added: 2026-10-28
-last_verified: 2026-10-28
+published: '2025-08-05'
+added: '2026-10-28'
+last_verified: '2026-10-28'
 source_type: primary
 section: incidents
 kind: writeup
 signals: [research_lab, cve]
 threats: [T6, T9]
 sources:
-  - https://research.checkpoint.com/2025/cursor-vulnerability-mcpoison/
-  - https://github.com/cursor/cursor/security/advisories/GHSA-24mc-g4xr-4395
+- https://blog.checkpoint.com/research/cursor-ide-persistent-code-execution-via-mcp-trust-bypass/
+- https://github.com/cursor/cursor/security/advisories/GHSA-24mc-g4xr-4395
 description: Disclosure of CVE-2025-54136, where Cursor kept trusting an approved MCP server entry after its command was changed in a shared repository, giving persistent code execution.

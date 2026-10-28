@@ -1,5 +1,5 @@
 title: OWASP MCP Top 10
-url: https://owasp.org/www-project-mcp-top-10/
+url: https://owasp.org/projects/mcp-top-10
 author: Vandana Verma Sehgal
 org: OWASP
 author_kind: standards_body
@@ -10,8 +10,7 @@ source_type: primary
 section: research
 kind: taxonomy
 start_here: true
-signals:
-- standards_body
+signals: [standards_body]
 sources:
 - https://github.com/OWASP/www-project-mcp-top-10
 description: OWASP project listing ten MCP risk categories, including token exposure, scope creep, tool poisoning and supply chain tampering, with mitigations; currently a beta release.

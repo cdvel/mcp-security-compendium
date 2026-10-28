@@ -12,6 +12,4 @@ kind: guide
 start_here: true
 signals: [spec_maintainers]
 threats: [T1, T8, T9]
-sources:
-  - https://modelcontextprotocol.io/specification/2026-07-28/basic/security_best_practices
 description: MCP maintainers' catalogue of attacks and mitigations, including confused deputy, token passthrough, SSRF, state handle hijacking, local server compromise, stdio proxy risks and mix-up attacks.

@@ -3,14 +3,14 @@ url: https://github.com/trailofbits/mcp-context-protector
 author: Trail of Bits
 org: Trail of Bits
 author_kind: research_lab
-published: "2025-04-28"
-added: "2026-10-28"
-last_verified: "2026-10-28"
+published: '2025-07-28'
+added: '2026-10-28'
+last_verified: '2026-10-28'
 source_type: primary
 section: clients_and_hosts
 kind: tool
 signals: [research_lab, contributors]
 threats: [T4, T6]
 sources:
-  - https://blog.trailofbits.com/2025/07/28/we-built-the-security-layer-mcp-always-needed/
+- https://blog.trailofbits.com/2025/07/28/we-built-the-security-layer-mcp-always-needed/
 description: Wrapper between an MCP client and server that pins server configuration on first use, blocks unapproved changes, sanitizes ANSI control characters and can quarantine tool responses flagged by a guardrail provider.

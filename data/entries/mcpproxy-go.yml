@@ -2,12 +2,12 @@ title: MCPProxy (mcpproxy-go)
 url: https://github.com/smart-mcp-proxy/mcpproxy-go
 author: smart-mcp-proxy
 author_kind: independent
-published: 2025-06-18
-added: 2026-10-28
-last_verified: 2026-10-28
+published: '2025-06-18'
+added: '2026-10-28'
+last_verified: '2026-10-28'
 source_type: primary
 section: gateways_and_proxies
 kind: tool
 signals: [stars, contributors, active]
 threats: [T4, T2, T12]
-description: Local proxy that aggregates MCP servers behind one endpoint, quarantining new servers for review against tool poisoning, with scanner integration, tool-call checks and an activity log.
+description: Local proxy that aggregates MCP servers behind one endpoint, quarantining new servers for review against tool poisoning, with scanner integration, tool-call checks and an activity log; sends anonymous telemetry by default.

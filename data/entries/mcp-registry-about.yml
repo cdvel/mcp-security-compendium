@@ -1,9 +1,9 @@
-title: "The MCP Registry: About, Trust and Security"
+title: 'The MCP Registry: About, Trust and Security'
 url: https://modelcontextprotocol.io/registry/about
 author: MCP maintainers
 org: Model Context Protocol
 author_kind: project_maintainers
-published: '2025-11'
+published: 2025-11
 added: '2026-10-28'
 last_verified: '2026-10-28'
 source_type: primary
@@ -13,5 +13,5 @@ start_here: true
 signals: [spec_maintainers, docs]
 threats: [T6, T11]
 sources:
-  - https://modelcontextprotocol.io/registry/package-types
-description: Official MCP Registry documentation on its trust model, with namespace authentication and per-ecosystem package ownership checks, and security scanning of server code delegated to package registries and aggregators.
+- https://modelcontextprotocol.io/registry/package-types
+description: 'Official MCP Registry (in preview) documentation on its trust model: namespace authentication, per-ecosystem package ownership checks, and security scanning of server code left to package registries and aggregators.'

@@ -1,18 +1,19 @@
-title: mcp-server-git path validation, git_init and argument injection flaws (CVE-2025-68143/68144/68145)
-url: https://github.com/advisories/GHSA-5cgr-j3jf-jw3v
-author: MCP servers maintainers
-org: Anthropic
-author_kind: project_maintainers
-published: 2025-12-17
-added: 2026-10-28
-last_verified: 2026-10-28
+title: 'Cyata Research: Breaking Anthropic''s Official MCP Server'
+url: https://web.archive.org/web/20260120194920/https://cyata.ai/blog/cyata-research-breaking-anthropics-official-mcp-server/
+author: Cyata Research
+org: Cyata
+author_kind: vendor_lab
+published: '2026-01-20'
+added: '2026-10-28'
+last_verified: '2026-10-28'
 source_type: primary
 section: incidents
-kind: advisory
-signals: [cve]
+kind: writeup
+signals: [research_lab, cve]
 threats: [T3, T2]
 sources:
-  - https://github.com/advisories/GHSA-9xwc-hfwc-8w59
-  - https://github.com/advisories/GHSA-j22h-9j4x-23w5
-  - https://www.theregister.com/2026/01/20/anthropic_prompt_injection_flaws/
-description: Three advisories in the official Git MCP server (unrestricted git_init, argument injection, unconfined repo_path) that researchers chained with the Filesystem MCP server for code execution.
+- https://github.com/advisories/GHSA-5cgr-j3jf-jw3v
+- https://github.com/advisories/GHSA-9xwc-hfwc-8w59
+- https://github.com/advisories/GHSA-j22h-9j4x-23w5
+- https://www.theregister.com/2026/01/20/anthropic_prompt_injection_flaws/
+description: 'Cyata write-up (archived) chaining three flaws in the official Git MCP server (CVE-2025-68143/68144/68145: unrestricted git_init, argument injection, unconfined repo_path) with the Filesystem server for code execution.'

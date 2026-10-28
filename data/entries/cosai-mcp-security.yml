@@ -10,7 +10,7 @@ source_type: primary
 section: research
 kind: taxonomy
 start_here: true
-signals:
-- standards_body
-- cited_by_strong
-description: CoSAI threat model for MCP deployments defining twelve threat categories (MCP-T1 to MCP-T12) and mapping them to controls such as agent identity, delegation, sandboxing, transport security and logging.
+signals: [standards_body, cited_by_strong]
+description: CoSAI threat model for MCP deployments defining twelve threat categories (MCP-T1 to MCP-T12) mapped to controls such as agent identity, sandboxing and transport security; v2.0 (2026-08) covers the 2026-07-28 spec.
+sources:
+- https://github.com/cosai-oasis/ws4-secure-design-agentic-systems/blob/main/whitepapers/model-context-protocol-security.md

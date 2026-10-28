@@ -9,10 +9,9 @@ last_verified: '2026-10-28'
 source_type: primary
 section: research
 kind: paper
-signals:
-- paper
-threats:
-- T4
+signals: [paper, paper_with_code]
+threats: [T4]
 sources:
 - https://doi.org/10.1609/aaai.v40i42.40898
+- https://github.com/hanbaoergogo/MPMA
 description: AAAI 2026 paper on attacks where a malicious MCP server edits tool names and descriptions, including with a genetic algorithm for stealth, so LLMs choose it over competing servers.

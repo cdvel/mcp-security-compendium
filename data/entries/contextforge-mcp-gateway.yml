@@ -3,14 +3,14 @@ url: https://github.com/IBM/mcp-context-forge
 author: IBM
 org: IBM
 author_kind: vendor_lab
-published: 2025-05-08
-added: 2026-10-28
-last_verified: 2026-10-28
+published: '2025-05-08'
+added: '2026-10-28'
+last_verified: '2026-10-28'
 source_type: primary
 section: gateways_and_proxies
 kind: tool
 signals: [stars, contributors, active, cve]
 threats: [T1, T2, T12]
 sources:
-  - https://github.com/advisories/GHSA-xm98-3vcf-fph7
-description: Gateway, registry and proxy in front of MCP, A2A and REST/gRPC services with central authentication, discovery and plugin-based guardrails; affected by critical sandbox escape CVE-2026-53710.
+- https://github.com/advisories/GHSA-xm98-3vcf-fph7
+description: Gateway, registry and proxy in front of MCP, A2A and REST/gRPC services with central authentication, discovery and plugin-based guardrails; its bundled sample sandbox server had CVE-2026-53710 (fixed in 1.0.2).

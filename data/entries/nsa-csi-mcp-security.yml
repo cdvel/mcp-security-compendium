@@ -9,8 +9,7 @@ last_verified: '2026-10-28'
 source_type: primary
 section: research
 kind: guide
-signals:
-- standards_body
+signals: [standards_body]
 sources:
 - https://web.archive.org/web/20260520161722/https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf
-description: NSA Cybersecurity Information sheet on observed MCP security concerns, such as code execution through unconstrained inputs and token and session weaknesses, with recommendations for production deployments.
+description: NSA Cybersecurity Information sheet on MCP security concerns, such as code execution through unconstrained inputs and token and session weaknesses, with deployment recommendations; written against the 2025-11-25 spec.

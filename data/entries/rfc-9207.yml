@@ -1,9 +1,9 @@
-title: "RFC 9207: OAuth 2.0 Authorization Server Issuer Identification"
+title: 'RFC 9207: OAuth 2.0 Authorization Server Issuer Identification'
 url: https://datatracker.ietf.org/doc/rfc9207/
 author: K. Meyer zu Selhausen; D. Fett
 org: IETF
 author_kind: standards_body
-published: '2022-03'
+published: 2022-03
 added: '2026-10-28'
 last_verified: '2026-10-28'
 source_type: primary
@@ -11,4 +11,4 @@ section: specification_and_authorization
 kind: spec
 signals: [standards_body]
 threats: [T1]
-description: IETF RFC defining the iss authorization response parameter against mix-up attacks; listed because the 2026-07-28 MCP spec requires clients to apply its issuer validation.
+description: IETF RFC defining the iss authorization response parameter against mix-up attacks; listed because the 2026-07-28 MCP spec requires clients to validate iss when an authorization server sends it.

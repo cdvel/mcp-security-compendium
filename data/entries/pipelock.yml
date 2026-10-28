@@ -2,10 +2,10 @@ title: Pipelock
 url: https://github.com/pipelab-org/pipelock
 author: PipeLab
 org: PipeLab
-author_kind: independent
-published: 2026-02-08
-added: 2026-10-28
-last_verified: 2026-10-28
+author_kind: vendor_lab
+published: '2026-02-08'
+added: '2026-10-28'
+last_verified: '2026-10-28'
 source_type: primary
 section: gateways_and_proxies
 kind: tool

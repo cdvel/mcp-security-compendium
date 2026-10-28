@@ -9,11 +9,8 @@ last_verified: '2026-10-28'
 source_type: primary
 section: research
 kind: paper
-signals:
-- paper
-- paper_with_code
-threats:
-- T11
+signals: [paper]
+threats: [T11]
 sources:
 - https://doi.org/10.1145/3796519
 - https://github.com/security-pride/MCP_Landscape

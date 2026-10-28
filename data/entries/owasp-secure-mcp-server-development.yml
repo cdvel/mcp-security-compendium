@@ -1,15 +1,15 @@
-title: "OWASP: A Practical Guide for Secure MCP Server Development"
+title: 'OWASP: A Practical Guide for Secure MCP Server Development'
 url: https://genai.owasp.org/resource/a-practical-guide-for-secure-mcp-server-development/
 author: OWASP GenAI Security Project
 org: OWASP
 author_kind: standards_body
-published: "2026-02-16"
-added: "2026-10-28"
-last_verified: "2026-10-28"
+published: '2026-02-16'
+added: '2026-10-28'
+last_verified: '2026-10-28'
 source_type: primary
 section: servers
 kind: guide
 start_here: true
 signals: [standards_body]
 threats: [T1, T2, T3]
-description: Guide for building MCP servers covering architecture, authentication, authorization, input validation, session isolation and deployment hardening; predates the 2026-07-28 spec, which deprecates sessions.
+description: Guide for building MCP servers covering architecture, authentication, authorization, input validation, session isolation and deployment hardening; predates the 2026-07-28 spec, which removes protocol-level sessions.

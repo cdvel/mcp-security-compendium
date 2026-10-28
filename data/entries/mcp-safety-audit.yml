@@ -9,11 +9,8 @@ last_verified: '2026-10-28'
 source_type: primary
 section: research
 kind: paper
-signals:
-- paper_with_code
-threats:
-- T4
-- T9
+signals: [paper_with_code]
+threats: [T4, T9]
 sources:
 - https://github.com/johnhalloran321/mcpSafetyScanner
-description: Preprint showing LLMs coerced through MCP tools into code execution, remote access and credential theft, and introducing McpSafetyScanner, an agent-based MCP server auditing tool.
+description: Preprint showing LLMs coerced through MCP tools into code execution, remote access and credential theft, and introducing McpSafetyScanner, an agent-based MCP server auditing tool (not maintained since 2025-04).
