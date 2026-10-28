@@ -1,0 +1,16 @@
+title: ToolHive
+url: https://github.com/stacklok/toolhive
+author: Stacklok
+org: Stacklok
+author_kind: vendor_lab
+published: "2025-03-12"
+added: "2026-10-28"
+last_verified: "2026-10-28"
+source_type: primary
+section: clients_and_hosts
+kind: tool
+signals: [stars, contributors, active, security_policy]
+threats: [T8, T9, T2]
+sources:
+  - https://docs.stacklok.com/toolhive/
+description: Runs each MCP server in an isolated container with a minimal permission profile, with optional per-request identity and access policy, a gateway, a registry and a Kubernetes operator.

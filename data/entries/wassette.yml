@@ -1,0 +1,14 @@
+title: Wassette
+url: https://github.com/microsoft/wassette
+author: Microsoft
+org: Microsoft
+author_kind: vendor_lab
+published: "2025-07-15"
+added: "2026-10-28"
+last_verified: "2026-10-28"
+source_type: primary
+section: clients_and_hosts
+kind: tool
+signals: [stars, contributors, active, security_policy]
+threats: [T8, T9, T10]
+description: MCP server that runs tools as WebAssembly components in the Wasmtime sandbox under capability policies for storage, network and environment access; marked early development, not production ready.

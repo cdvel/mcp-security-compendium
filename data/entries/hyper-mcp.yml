@@ -1,0 +1,14 @@
+title: hyper-mcp
+url: https://github.com/hyper-mcp-rs/hyper-mcp
+author: Tuan Anh Tran and contributors
+org: hyper-mcp-rs
+author_kind: project_maintainers
+published: "2025-01-10"
+added: "2026-10-28"
+last_verified: "2026-10-28"
+source_type: primary
+section: clients_and_hosts
+kind: tool
+signals: [stars, contributors, active]
+threats: [T8, T10, T6]
+description: MCP server that loads tools as Extism WebAssembly plugins from OCI registries, with network, filesystem and memory limits per plugin and sigstore signature verification at load time.

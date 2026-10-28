@@ -1,0 +1,16 @@
+title: Snyk Agent Scan (formerly mcp-scan)
+url: https://github.com/snyk/agent-scan
+author: Invariant Labs
+org: Snyk
+author_kind: vendor_lab
+published: "2025-04-07"
+added: "2026-10-28"
+last_verified: "2026-10-28"
+source_type: primary
+section: clients_and_hosts
+kind: tool
+signals: [stars, contributors, active, security_policy]
+threats: [T4, T11]
+sources:
+  - https://invariantlabs.ai/blog/introducing-mcp-scan
+description: CLI that discovers installed agents, MCP servers and skills and checks them for prompt injection, tool poisoning and malware; needs a Snyk token and sends tool descriptions and configs (secrets redacted) to Snyk's API.

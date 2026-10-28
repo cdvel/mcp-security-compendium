@@ -1,0 +1,15 @@
+title: "OWASP: A Practical Guide for Securely Using Third-Party MCP Servers 1.0"
+url: https://genai.owasp.org/resource/cheatsheet-a-practical-guide-for-securely-using-third-party-mcp-servers-1-0/
+author: OWASP GenAI Security Project
+org: OWASP
+author_kind: standards_body
+published: "2025-11-04"
+added: "2026-10-28"
+last_verified: "2026-10-28"
+source_type: primary
+section: clients_and_hosts
+kind: guide
+start_here: true
+signals: [standards_body]
+threats: [T4, T2, T11]
+description: Cheat sheet for consuming external MCP servers, covering tool poisoning, prompt injection, memory poisoning, authentication, authorization, client sandboxing, server discovery and governance.
