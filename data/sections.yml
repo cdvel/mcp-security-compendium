@@ -9,7 +9,7 @@
   summary: Applications that run MCP clients, their configuration and local server sandboxing.
 - id: servers
   title: Servers
-  summary: Building, scanning and testing MCP servers.
+  summary: Building and scanning MCP servers.
 - id: gateways_and_proxies
   title: Gateways and proxies
   summary: Components between clients and servers that enforce policy, authentication or isolation, or monitor and audit MCP traffic.
