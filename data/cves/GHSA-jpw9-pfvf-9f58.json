@@ -16,7 +16,8 @@
     "github_reviewed": true,
     "github_reviewed_at": "2026-07-16T19:58:53Z",
     "nvd_published_at": "2026-07-15T20:17:38Z",
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "HTTP transports served session requests without checking the authenticated principal."
   },
   "references": [
     {

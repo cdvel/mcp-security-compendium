@@ -16,7 +16,8 @@
       "CWE-863"
     ],
     "severity": "HIGH",
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "OAuth proxy accepted tokens issued for one MCP server at another."
   },
   "references": [
     {

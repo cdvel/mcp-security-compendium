@@ -15,7 +15,8 @@
     ],
     "severity": "MODERATE",
     "github_reviewed": true,
-    "component": "gateways_and_proxies"
+    "component": "gateways_and_proxies",
+    "summary_short": "Missing parameter sanitization when converting MCP calls to OpenAPI requests."
   },
   "references": [
     {

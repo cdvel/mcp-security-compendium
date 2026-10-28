@@ -16,7 +16,8 @@
       "CWE-1188"
     ],
     "severity": "HIGH",
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "DNS rebinding protection was off by default for localhost servers."
   },
   "references": [
     {

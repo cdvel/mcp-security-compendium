@@ -16,7 +16,8 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-10-06T15:35:44Z",
-    "component": "clients_and_hosts"
+    "component": "clients_and_hosts",
+    "summary_short": "OAuth client could send credentials to an authorization server chosen by the MCP server."
   },
   "references": [
     {

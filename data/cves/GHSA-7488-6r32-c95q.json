@@ -16,7 +16,8 @@
     ],
     "severity": "HIGH",
     "github_reviewed": true,
-    "component": "gateways_and_proxies"
+    "component": "gateways_and_proxies",
+    "summary_short": "MCP authentication bypass through an OAuth2 passthrough fallback."
   },
   "references": [
     {

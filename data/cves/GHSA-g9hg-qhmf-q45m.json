@@ -17,7 +17,8 @@
       "CWE-94"
     ],
     "severity": "HIGH",
-    "component": "clients_and_hosts"
+    "component": "clients_and_hosts",
+    "summary_short": "XSS from an untrusted server's OAuth redirect URL could lead to command execution."
   },
   "references": [
     {

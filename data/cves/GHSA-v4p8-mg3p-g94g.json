@@ -17,7 +17,8 @@
       "CWE-78"
     ],
     "severity": "HIGH",
-    "component": "gateways_and_proxies"
+    "component": "gateways_and_proxies",
+    "summary_short": "Authenticated users could run commands through MCP stdio test endpoints."
   },
   "references": [
     {

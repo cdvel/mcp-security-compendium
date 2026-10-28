@@ -15,7 +15,8 @@
     "cwe_ids": [
       "CWE-306"
     ],
-    "component": "clients_and_hosts"
+    "component": "clients_and_hosts",
+    "summary_short": "Inspector proxy had no authentication, so requests (including from browsers) could launch stdio commands."
   },
   "references": [
     {

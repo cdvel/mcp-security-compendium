@@ -16,7 +16,8 @@
     ],
     "severity": "MODERATE",
     "github_reviewed": true,
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Missing path validation with the --repository flag."
   },
   "references": [
     {

@@ -15,7 +15,8 @@
     "github_reviewed": true,
     "github_reviewed_at": "2026-02-04T20:04:16Z",
     "nvd_published_at": "2026-02-04T22:15:59Z",
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Reusing one server or transport instance across clients leaked data between them."
   },
   "references": [
     {

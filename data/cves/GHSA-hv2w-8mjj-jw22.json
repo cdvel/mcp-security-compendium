@@ -15,7 +15,8 @@
     ],
     "severity": "MODERATE",
     "github_reviewed": true,
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Hardcoded wildcard CORS (Access-Control-Allow-Origin: *)."
   },
   "references": [
     {

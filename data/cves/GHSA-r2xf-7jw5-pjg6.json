@@ -16,7 +16,8 @@
       "CWE-88"
     ],
     "severity": "HIGH",
-    "component": "gateways_and_proxies"
+    "component": "gateways_and_proxies",
+    "summary_short": "Argument injection through YAML in OCI image labels."
   },
   "references": [
     {

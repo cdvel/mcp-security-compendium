@@ -17,7 +17,8 @@
       "CWE-178",
       "CWE-436"
     ],
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Case-insensitive JSON key matching let altered protocol messages through."
   },
   "references": [
     {

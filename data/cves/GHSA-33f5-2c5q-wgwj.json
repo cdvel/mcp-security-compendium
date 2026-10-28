@@ -15,7 +15,8 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-09-16T22:13:26Z",
-    "component": "clients_and_hosts"
+    "component": "clients_and_hosts",
+    "summary_short": "OAuth client did not validate the resource field in protected resource metadata."
   },
   "references": [
     {

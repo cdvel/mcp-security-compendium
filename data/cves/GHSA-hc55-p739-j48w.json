@@ -15,7 +15,8 @@
     "cwe_ids": [
       "CWE-22"
     ],
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Path validation bypass via colliding path prefixes."
   },
   "references": [
     {

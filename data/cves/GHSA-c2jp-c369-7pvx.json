@@ -12,7 +12,8 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2025-10-29T15:38:07Z",
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Auth integration allowed confused deputy account takeover."
   },
   "references": [
     {

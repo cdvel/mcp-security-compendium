@@ -30,6 +30,7 @@
   "database_specific": {
     "severity": "HIGH",
     "source": "GitHub repository advisory (cursor/cursor); not in OSV",
-    "component": "clients_and_hosts"
+    "component": "clients_and_hosts",
+    "summary_short": "Changing an approved MCP server definition did not trigger re-approval (MCPoison)."
   }
 }

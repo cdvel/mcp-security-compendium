@@ -15,7 +15,8 @@
     "cwe_ids": [
       "CWE-306"
     ],
-    "component": "clients_and_hosts"
+    "component": "clients_and_hosts",
+    "summary_short": "Unauthenticated HTTP endpoint lets a crafted request install an MCP server, leading to code execution."
   },
   "references": [
     {

@@ -16,7 +16,8 @@
     "github_reviewed": true,
     "github_reviewed_at": "2026-06-25T21:32:09Z",
     "nvd_published_at": null,
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Shared lockdown-mode state in the HTTP server mixed up GraphQL clients across users."
   },
   "references": [
     {

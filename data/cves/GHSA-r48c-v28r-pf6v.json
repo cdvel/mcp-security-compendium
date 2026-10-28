@@ -16,7 +16,8 @@
       "CWE-918"
     ],
     "severity": "MODERATE",
-    "component": "registries_and_supply_chain"
+    "component": "registries_and_supply_chain",
+    "summary_short": "Unauthenticated SSRF: namespace verification reached private IPv6 ranges past the allowlist."
   },
   "references": [
     {

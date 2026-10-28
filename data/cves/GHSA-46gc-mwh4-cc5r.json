@@ -16,7 +16,8 @@
       "CWE-749"
     ],
     "severity": "HIGH",
-    "component": "gateways_and_proxies"
+    "component": "gateways_and_proxies",
+    "summary_short": "DNS rebinding in SSE and streaming modes."
   },
   "references": [
     {

@@ -16,7 +16,8 @@
     ],
     "severity": "HIGH",
     "github_reviewed": true,
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "HTTP servers without authorization allowed cross-site tool execution."
   },
   "references": [
     {

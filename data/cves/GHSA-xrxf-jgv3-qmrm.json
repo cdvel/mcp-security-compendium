@@ -15,7 +15,8 @@
       "CWE-94"
     ],
     "severity": "CRITICAL",
-    "component": "clients_and_hosts"
+    "component": "clients_and_hosts",
+    "summary_short": "MCP configuration files in a repository could run code."
   },
   "references": [
     {

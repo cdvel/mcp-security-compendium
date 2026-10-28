@@ -16,7 +16,8 @@
     ],
     "severity": "CRITICAL",
     "github_reviewed": true,
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Argument injection could expose Kubernetes cluster credentials."
   },
   "references": [
     {

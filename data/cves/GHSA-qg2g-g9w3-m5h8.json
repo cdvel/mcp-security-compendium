@@ -17,7 +17,8 @@
     ],
     "severity": "HIGH",
     "github_reviewed": true,
-    "component": "gateways_and_proxies"
+    "component": "clients_and_hosts",
+    "summary_short": "Containerized MCP servers could reach host services through host.docker.internal."
   },
   "references": [
     {

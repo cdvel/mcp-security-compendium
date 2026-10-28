@@ -15,7 +15,8 @@
     "cwe_ids": [
       "CWE-59"
     ],
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Path validation bypass via prefix matching and symlinks."
   },
   "references": [
     {

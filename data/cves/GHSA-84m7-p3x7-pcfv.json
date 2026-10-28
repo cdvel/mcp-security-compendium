@@ -17,7 +17,8 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-10-15T20:13:13Z",
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Streamable HTTP transport accumulated sessions without limit, exhausting resources."
   },
   "references": [
     {

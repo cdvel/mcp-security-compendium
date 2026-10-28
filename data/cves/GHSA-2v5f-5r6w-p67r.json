@@ -16,7 +16,8 @@
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-19T15:39:55Z",
     "nvd_published_at": "2026-05-14T21:16:48Z",
-    "component": "registries_and_supply_chain"
+    "component": "registries_and_supply_chain",
+    "summary_short": "OCI validator skipped the package ownership check when the upstream registry rate-limited."
   },
   "references": [
     {

@@ -16,7 +16,8 @@
     "cwe_ids": [
       "CWE-77"
     ],
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Command injection in the get_figma_data tool."
   },
   "references": [
     {

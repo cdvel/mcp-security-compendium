@@ -16,7 +16,8 @@
       "CWE-248"
     ],
     "severity": "HIGH",
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Malformed input to a FastMCP server raised an unhandled validation error, causing denial of service."
   },
   "references": [
     {

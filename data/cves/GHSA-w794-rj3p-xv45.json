@@ -22,7 +22,8 @@
       "CWE-78"
     ],
     "severity": "CRITICAL",
-    "component": "clients_and_hosts"
+    "component": "clients_and_hosts",
+    "summary_short": "Arbitrary command in an MCP stdio server configuration led to code execution."
   },
   "references": [
     {

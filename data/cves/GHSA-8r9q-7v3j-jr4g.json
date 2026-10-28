@@ -15,7 +15,8 @@
     "github_reviewed": true,
     "github_reviewed_at": "2026-01-06T21:20:37Z",
     "nvd_published_at": "2026-01-05T21:16:14Z",
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Regular expression denial of service (ReDoS)."
   },
   "references": [
     {

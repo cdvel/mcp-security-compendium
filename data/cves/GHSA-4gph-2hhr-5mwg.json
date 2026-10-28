@@ -15,7 +15,8 @@
     "cwe_ids": [
       "CWE-178"
     ],
-    "component": "gateways_and_proxies"
+    "component": "gateways_and_proxies",
+    "summary_short": "Case-insensitive JSON-RPC parsing let altered MCP messages bypass security controls in layered setups."
   },
   "references": [
     {

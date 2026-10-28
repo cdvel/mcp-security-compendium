@@ -16,7 +16,8 @@
     "cwe_ids": [
       "CWE-918"
     ],
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Server-side request forgery let an authorized attacker elevate privileges."
   },
   "references": [
     {

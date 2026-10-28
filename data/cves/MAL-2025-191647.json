@@ -90,7 +90,8 @@
       }
     ],
     "component": "registries_and_supply_chain",
-    "severity": "MALICIOUS"
+    "severity": "MALICIOUS",
+    "summary_short": "Name-squat package that opens a reverse shell."
   },
   "references": [
     {

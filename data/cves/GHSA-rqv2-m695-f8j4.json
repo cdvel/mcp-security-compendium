@@ -17,7 +17,8 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-08T17:18:32Z",
-    "component": "registries_and_supply_chain"
+    "component": "registries_and_supply_chain",
+    "summary_short": "Stored XSS in the catalogue UI through a publisher-set websiteUrl."
   },
   "references": [
     {

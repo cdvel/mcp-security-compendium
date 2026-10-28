@@ -16,7 +16,8 @@
     ],
     "severity": "MODERATE",
     "github_reviewed": true,
-    "component": "registries_and_supply_chain"
+    "component": "registries_and_supply_chain",
+    "summary_short": "Open redirect via protocol-relative paths."
   },
   "references": [
     {

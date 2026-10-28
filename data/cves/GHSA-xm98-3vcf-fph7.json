@@ -17,7 +17,8 @@
       "CWE-693",
       "CWE-94"
     ],
-    "component": "gateways_and_proxies"
+    "component": "servers",
+    "summary_short": "Sandbox bypass in the bundled python_sandbox_server sample; the gateway itself was not affected."
   },
   "references": [
     {

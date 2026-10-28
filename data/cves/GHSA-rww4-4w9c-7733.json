@@ -16,7 +16,8 @@
     "github_reviewed": true,
     "github_reviewed_at": "2026-03-31T22:32:28Z",
     "nvd_published_at": "2026-04-03T16:16:36Z",
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "OAuth proxy callback skipped consent checks, enabling confused deputy attacks."
   },
   "references": [
     {

@@ -24,7 +24,8 @@
       }
     ],
     "component": "registries_and_supply_chain",
-    "severity": "MALICIOUS"
+    "severity": "MALICIOUS",
+    "summary_short": "Turned malicious in v1.0.16 and copied sent emails to the attacker by BCC."
   },
   "references": [
     {

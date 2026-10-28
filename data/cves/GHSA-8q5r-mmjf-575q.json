@@ -16,7 +16,8 @@
     "github_reviewed": true,
     "github_reviewed_at": "2026-06-10T19:33:48Z",
     "nvd_published_at": "2026-07-16T17:16:57Z",
-    "component": "clients_and_hosts"
+    "component": "clients_and_hosts",
+    "summary_short": "MCP server configuration in a pull request could run code and exfiltrate secrets."
   },
   "references": [
     {

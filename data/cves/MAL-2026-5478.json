@@ -68,7 +68,8 @@
       }
     ],
     "component": "registries_and_supply_chain",
-    "severity": "MALICIOUS"
+    "severity": "MALICIOUS",
+    "summary_short": "Name-squat package that sends host details to a remote endpoint on install (self-described canary research)."
   },
   "references": [
     {

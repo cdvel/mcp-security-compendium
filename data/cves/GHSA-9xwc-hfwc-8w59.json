@@ -16,7 +16,8 @@
       "CWE-88"
     ],
     "severity": "MODERATE",
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Argument injection in git_diff and git_checkout could overwrite local files."
   },
   "references": [
     {

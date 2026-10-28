@@ -18,7 +18,8 @@
     "cwe_ids": [
       "CWE-77"
     ],
-    "component": "servers"
+    "component": "servers",
+    "summary_short": "Command injection in several tools."
   },
   "references": [
     {
