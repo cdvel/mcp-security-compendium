@@ -28,6 +28,8 @@ An entry needs **one strong signal or two supporting signals**, plus at least on
 
 The star threshold is lower than the 500 used for older topics because MCP tooling dates from late 2024.
 
+If the primary source cannot be reached (dead link, redirect, 403), the entry stays only when the issuer has very high reputation, such as a government agency or standards body, with an archived copy linked where one exists. Otherwise it is dropped unless an archived copy or another primary source replaces it.
+
 Not accepted: vendor marketing, gated content, AI-generated listicles, unverified claims, duplicates, and projects archived or without commits for 12 months (unless listed in `data/exemptions.yml`).
 
 ## CVE tracker
