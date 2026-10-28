@@ -57,7 +57,8 @@ def load_cves():
 
 
 def who(e):
-    name = e["author"].replace("; ", ", ")
+    names = e["author"].split("; ")
+    name = f"{names[0]} et al." if len(names) > 3 else ", ".join(names)
     if e.get("org") and e["org"] not in e["author"]:
         name += f" ({e['org']})"
     return name
