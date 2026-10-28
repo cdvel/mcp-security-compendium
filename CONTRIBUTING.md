@@ -34,7 +34,7 @@ Not accepted: vendor marketing, gated content, AI-generated listicles, unverifie
 
 ## CVE tracker
 
-Advisories in MCP SDKs, servers, clients and gateways are included. Advisories in general agent tools are included only when the root cause is in MCP handling: configuration, transport, authorization or tool output.
+Advisories in MCP SDKs, servers, clients and gateways are included. Advisories in general agent tools are included only when the root cause is in MCP handling: configuration, transport, authorization or tool output. A client's protection of its own MCP configuration counts (for example, an agent writing `mcp.json` without approval); a flaw elsewhere that only uses MCP configuration as its payload does not. Excluded advisories and reasons are in `data/cve-exclusions.json`.
 
 ## Attribution
 
