@@ -1,0 +1,14 @@
+title: "SEP-991: Enable URL-based Client Registration using OAuth Client ID Metadata Documents"
+url: https://modelcontextprotocol.io/seps/991-enable-url-based-client-registration-using-oauth-c
+author: Paul Carleton; Aaron Parecki
+org: Model Context Protocol
+author_kind: project_maintainers
+published: '2025-07-07'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: specification_and_authorization
+kind: spec
+signals: [spec_maintainers]
+threats: [T1]
+description: Final MCP enhancement proposal adopting Client ID Metadata Documents for client registration, with its risk analysis (localhost impersonation, SSRF, DDoS) and the case against Dynamic Client Registration, deprecated in 2026-07-28.

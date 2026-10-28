@@ -1,0 +1,15 @@
+title: "MCP Specification 2026-07-28: Key Changes"
+url: https://modelcontextprotocol.io/specification/2026-07-28/changelog
+author: MCP maintainers
+org: Model Context Protocol
+author_kind: project_maintainers
+published: '2026-07-28'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: specification_and_authorization
+kind: spec
+start_here: true
+signals: [spec_maintainers]
+threats: [T1, T7]
+description: Changelog for the 2026-07-28 MCP specification, covering removal of protocol sessions and the initialize handshake, issuer validation, and deprecation of Sampling, Roots, Logging and Dynamic Client Registration.

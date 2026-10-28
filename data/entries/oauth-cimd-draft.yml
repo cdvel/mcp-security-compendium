@@ -1,0 +1,14 @@
+title: OAuth Client ID Metadata Document (draft-ietf-oauth-client-id-metadata-document-02)
+url: https://datatracker.ietf.org/doc/draft-ietf-oauth-client-id-metadata-document/
+author: Aaron Parecki; Emelia Smith
+org: IETF OAuth WG
+author_kind: standards_body
+published: '2026-07-06'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: specification_and_authorization
+kind: spec
+signals: [standards_body]
+threats: [T1]
+description: IETF Internet-Draft (not yet an RFC) letting OAuth clients use an HTTPS URL as client_id; listed because the 2026-07-28 MCP spec says clients and authorization servers SHOULD support it.

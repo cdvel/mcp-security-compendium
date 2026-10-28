@@ -1,0 +1,14 @@
+title: "RFC 9728: OAuth 2.0 Protected Resource Metadata"
+url: https://datatracker.ietf.org/doc/rfc9728/
+author: M.B. Jones; P. Hunt; A. Parecki
+org: IETF
+author_kind: standards_body
+published: '2025-04'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: specification_and_authorization
+kind: spec
+signals: [standards_body]
+threats: [T1]
+description: IETF RFC defining metadata a protected resource publishes to name its authorization servers; listed because the 2026-07-28 MCP spec requires MCP servers to implement it.

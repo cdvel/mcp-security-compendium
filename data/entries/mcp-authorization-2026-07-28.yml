@@ -1,0 +1,14 @@
+title: Authorization (2026-07-28)
+url: https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization
+author: MCP maintainers
+org: Model Context Protocol
+author_kind: project_maintainers
+published: '2026-07-28'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: specification_and_authorization
+kind: spec
+signals: [spec_maintainers]
+threats: [T1, T2]
+description: Normative MCP authorization text for HTTP transports, covering protected resource metadata, client registration (CIMD preferred, DCR deprecated), issuer validation, resource indicators, token audience and step-up scopes.

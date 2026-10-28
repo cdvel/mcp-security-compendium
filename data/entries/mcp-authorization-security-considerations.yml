@@ -1,0 +1,14 @@
+title: Authorization Security Considerations (2026-07-28)
+url: https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/security-considerations
+author: MCP maintainers
+org: Model Context Protocol
+author_kind: project_maintainers
+published: '2026-07-28'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: specification_and_authorization
+kind: spec
+signals: [spec_maintainers]
+threats: [T1, T2, T9]
+description: MUST-level security requirements for MCP authorization, covering token audience binding, token theft, mix-up attacks, open redirection, CIMD fetching, localhost redirect URIs and the confused deputy problem.
