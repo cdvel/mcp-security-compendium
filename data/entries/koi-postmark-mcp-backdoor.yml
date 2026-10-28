@@ -1,0 +1,16 @@
+title: "First Malicious MCP in the Wild: The Postmark Backdoor That's Stealing Your Emails"
+url: https://web.archive.org/web/20250925155409/https://www.koi.security/blog/postmark-mcp-npm-malicious-backdoor-email-theft
+author: Idan Dardikman
+org: Koi Security
+author_kind: vendor_lab
+published: '2025-09-25'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: registries_and_supply_chain
+kind: writeup
+signals: [research_lab]
+threats: [T5, T11]
+sources:
+  - https://osv.dev/vulnerability/MAL-2025-47604
+description: Archived Koi analysis of postmark-mcp, an npm MCP server impersonating Postmark that from version 1.0.16 added a hidden BCC sending every email it handled to an external domain.

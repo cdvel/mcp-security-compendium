@@ -1,0 +1,14 @@
+title: "MCP Registry: Authentication"
+url: https://modelcontextprotocol.io/registry/authentication
+author: MCP maintainers
+org: Model Context Protocol
+author_kind: project_maintainers
+published: '2025-11'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: registries_and_supply_chain
+kind: guide
+signals: [spec_maintainers, docs]
+threats: [T1, T11]
+description: Official MCP Registry guide to publisher authentication, tying server namespaces to a GitHub account (io.github.*) or to a domain proven by a DNS TXT record or an HTTP /.well-known/mcp-registry-auth key.

@@ -1,0 +1,14 @@
+title: "From Path Traversal to Supply Chain Compromise: Breaking MCP Server Hosting"
+url: https://blog.gitguardian.com/breaking-mcp-server-hosting/
+author: Gaetan Ferry
+org: GitGuardian
+author_kind: vendor_lab
+published: '2025-10-22'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: registries_and_supply_chain
+kind: writeup
+signals: [research_lab]
+threats: [T5, T11]
+description: GitGuardian disclosure of a path traversal in Smithery.ai's server build pipeline that leaked an overprivileged Fly.io token, giving access to over 3,000 hosted MCP servers and their secrets; patched.

@@ -1,0 +1,17 @@
+title: 3 Malicious MCP servers found on PyPI
+url: https://research.jfrog.com/post/3-malicious-mcps-pypi-reverse-shell/
+author: Guy Korolevski
+org: JFrog Security Research
+author_kind: vendor_lab
+published: '2025-10-19'
+added: '2026-10-28'
+last_verified: '2026-10-28'
+source_type: primary
+section: registries_and_supply_chain
+kind: writeup
+signals: [research_lab]
+threats: [T11]
+sources:
+  - https://osv.dev/vulnerability/MAL-2025-191647
+  - https://osv.dev/vulnerability/MAL-2025-191788
+description: JFrog analysis of three PyPI MCP servers (mcp-runcmd-server, mcp-runcommand-server, mcp-runcommand-server2) that open a reverse shell on start, linked to the earlier npm @lanyer640/mcp-runcommand-server.
