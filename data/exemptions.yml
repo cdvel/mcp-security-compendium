@@ -1,0 +1,4 @@
+# Finished projects exempt from staleness checks. Each needs a reason.
+# - slug: example
+#   reason: Reference implementation, feature complete.
+[]

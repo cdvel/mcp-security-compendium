@@ -1,0 +1,26 @@
+# Classification: option C (by component), approved 2026-10-17.
+# Order here is the README order. Fixed sections (Start here, CVE tracker) are added by the generator.
+- id: specification_and_authorization
+  title: Specification and authorization
+  summary: Spec security sections, authorization rules and maintainer guidance.
+- id: clients_and_hosts
+  title: Clients and hosts
+  summary: Applications that run MCP clients, their configuration and local server sandboxing.
+- id: servers
+  title: Servers
+  summary: Building, scanning and testing MCP servers.
+- id: gateways_and_proxies
+  title: Gateways and proxies
+  summary: Components between clients and servers that enforce policy, authentication or isolation.
+- id: registries_and_supply_chain
+  title: Registries and supply chain
+  summary: Distribution, verification and provenance of MCP servers and packages.
+- id: detection_and_monitoring
+  title: Detection and monitoring
+  summary: Runtime monitoring, logging and audit of MCP traffic.
+- id: research
+  title: Threat models and research
+  summary: Taxonomies, papers and lab research that span components.
+- id: incidents
+  title: Incidents
+  summary: Documented exploitation or disclosure involving MCP deployments.
