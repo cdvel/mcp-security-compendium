@@ -19,7 +19,7 @@
     "source_type": {"enum": ["primary", "secondary"]},
     "section": {"enum": ["specification_and_authorization", "clients_and_hosts", "servers",
                          "gateways_and_proxies", "registries_and_supply_chain",
-                         "detection_and_monitoring", "research", "incidents"]},
+                         "research", "incidents"]},
     "kind": {"enum": ["spec", "guide", "taxonomy", "paper", "writeup", "tool", "advisory", "dataset"]},
     "start_here": {"type": "boolean"},
     "signals": {

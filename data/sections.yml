@@ -1,4 +1,5 @@
 # Classification: option C (by component), approved 2026-10-17.
+# Detection and monitoring merged into Gateways and proxies, 2026-10-28.
 # Order here is the README order. Fixed sections (Start here, CVE tracker) are added by the generator.
 - id: specification_and_authorization
   title: Specification and authorization
@@ -11,13 +12,10 @@
   summary: Building, scanning and testing MCP servers.
 - id: gateways_and_proxies
   title: Gateways and proxies
-  summary: Components between clients and servers that enforce policy, authentication or isolation.
+  summary: Components between clients and servers that enforce policy, authentication or isolation, or monitor and audit MCP traffic.
 - id: registries_and_supply_chain
   title: Registries and supply chain
   summary: Distribution, verification and provenance of MCP servers and packages.
-- id: detection_and_monitoring
-  title: Detection and monitoring
-  summary: Runtime monitoring, logging and audit of MCP traffic.
 - id: research
   title: Threat models and research
   summary: Taxonomies, papers and lab research that span components.
