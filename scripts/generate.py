@@ -127,14 +127,26 @@ def anchor(title):
 
 
 def render(sections, entries, cves):
+    verified = max((e["last_verified"] for e in entries), default="never")
     out = [
+        '<div align="center">',
+        "",
         "# MCP security compendium",
         "",
-        "Curated, sourced resources on Model Context Protocol security, organized by component. "
-        "Every entry names its author and links a primary source; inclusion rules are in "
-        "[CONTRIBUTING.md](CONTRIBUTING.md). Threat tags `T1`–`T12` refer to the "
-        "[CoSAI MCP security taxonomy](https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf). "
-        "How entries are found and checked is in [METHODOLOGY.md](METHODOLOGY.md).",
+        "**Sourced, attributed resources and a CVE tracker for Model Context Protocol security.**",
+        "",
+        f"{len(entries)} entries · {len(cves)} advisories · CC BY 4.0 · last verified {verified}",
+        "",
+        "[Start here](#start-here) · [Contents](#contents) · [CVE tracker](#cve-tracker) · "
+        "[Methodology](METHODOLOGY.md) · [Contributing](CONTRIBUTING.md)",
+        "",
+        "</div>",
+        "",
+        "MCP security material is spread across spec pages, lab write-ups, papers and advisory databases, "
+        "and some of it predates the 2026-07-28 spec. This list keeps the entries with a credible author "
+        "and a primary source, organized by the component each one acts on. Every entry names its author "
+        "and date; threat tags `T1`–`T12` refer to the "
+        "[CoSAI MCP security taxonomy](https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf).",
         "",
     ] + GLOSSARY
     counts = Counter(e["section"] for e in entries)
@@ -163,11 +175,10 @@ def render(sections, entries, cves):
             "| ID | Aliases | Package | Component | Severity | Published | Summary |",
             "|---|---|---|---|---|---|---|",
         ] + [cve_row(c, {s['id']: s['title'] for s in sections}) for c in cves] + [""]
-    verified = max((e["last_verified"] for e in entries), default="never")
     out += [
         "---",
         "",
-        f"Last verified {verified}. Generated from `data/` by `scripts/generate.py`; do not edit by hand.",
+        "Generated from `data/` by `scripts/generate.py`; do not edit by hand.",
         "",
         "Content is licensed under [CC BY 4.0](LICENSE); scripts under [MIT](LICENSE-CODE).",
         "",

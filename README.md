@@ -1,6 +1,16 @@
+<div align="center">
+
 # MCP security compendium
 
-Curated, sourced resources on Model Context Protocol security, organized by component. Every entry names its author and links a primary source; inclusion rules are in [CONTRIBUTING.md](CONTRIBUTING.md). Threat tags `T1`–`T12` refer to the [CoSAI MCP security taxonomy](https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf). How entries are found and checked is in [METHODOLOGY.md](METHODOLOGY.md).
+**Sourced, attributed resources and a CVE tracker for Model Context Protocol security.**
+
+62 entries · 68 advisories · CC BY 4.0 · last verified 2026-10-28
+
+[Start here](#start-here) · [Contents](#contents) · [CVE tracker](#cve-tracker) · [Methodology](METHODOLOGY.md) · [Contributing](CONTRIBUTING.md)
+
+</div>
+
+MCP security material is spread across spec pages, lab write-ups, papers and advisory databases, and some of it predates the 2026-07-28 spec. This list keeps the entries with a credible author and a primary source, organized by the component each one acts on. Every entry names its author and date; threat tags `T1`–`T12` refer to the [CoSAI MCP security taxonomy](https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf).
 
 <details>
 <summary>Terms and threat tags</summary>
@@ -211,6 +221,6 @@ Documented exploitation or disclosure involving MCP deployments.
 
 ---
 
-Last verified 2026-10-28. Generated from `data/` by `scripts/generate.py`; do not edit by hand.
+Generated from `data/` by `scripts/generate.py`; do not edit by hand.
 
 Content is licensed under [CC BY 4.0](LICENSE); scripts under [MIT](LICENSE-CODE).
