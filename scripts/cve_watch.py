@@ -111,6 +111,7 @@ def guess_component(record, tracked):
     names = packages(record)
     seen = Counter(r["database_specific"].get("component") for r in tracked.values() if packages(r) & names)
     seen.pop(None, None)
+    seen.pop("", None)
     return seen.most_common(1)[0][0] if seen else ""
 
 
