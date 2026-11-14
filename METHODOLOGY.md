@@ -35,7 +35,7 @@ An entry is "verified" when its facts were read from the source itself, not from
 - **Advisories:** the OSV record, or the GitHub repository advisory when OSV has none. Each record also carries a short summary written for this list.
 - **Dead links:** an archived copy from the Wayback Machine, when the original page is gone or now redirects elsewhere.
 
-Each entry records the date it was last verified.
+Each entry records the date it was last verified. A monthly re-check repeats these checks, fixes facts that changed, and flags entries that no longer meet the bar for a maintainer to decide. The README shows the oldest verified date, so an entry that couldn't be checked keeps the badge honest.
 
 ## Adversarial review
 
