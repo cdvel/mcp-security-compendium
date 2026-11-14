@@ -18,6 +18,7 @@ DATA = ROOT / "data"
 README = ROOT / "README.md"
 CVES_MD = ROOT / "CVES.md"
 README_CVES = 20
+REPO = "cdvel/mcp-security-compendium"
 
 
 class Loader(yaml.SafeLoader):
@@ -190,7 +191,8 @@ def anchor(title):
 
 
 def render(sections, entries, cves):
-    verified = max((e["last_verified"] for e in entries), default="never")
+    # The oldest date, so a partial re-check never makes the whole list look fresher than it is.
+    verified = min((e["last_verified"] for e in entries), default="never")
     vulns = [c for c in cves if not is_malware(c)]
     malware = [c for c in cves if is_malware(c)]
     out = [
@@ -200,7 +202,9 @@ def render(sections, entries, cves):
         "",
         "**Sourced, attributed resources and a CVE tracker for Model Context Protocol security.**",
         "",
-        f"![Last verified {verified}](https://img.shields.io/badge/last_verified-{verified.replace('-', '--')}-2ea44f)",
+        f"![Entries verified {verified}](https://img.shields.io/badge/entries_verified-{verified.replace('-', '--')}-2ea44f) "
+        f"![Advisories updated](https://img.shields.io/github/last-commit/{REPO}?path=data%2Fcves&label=advisories%20updated) "
+        f"![Nightly CVE watch status](https://img.shields.io/github/actions/workflow/status/{REPO}/cves.yml?label=nightly%20cve%20watch)",
         "",
         f"{len(entries)} entries · {len(vulns)} advisories · {len(malware)} malicious packages · CC BY 4.0",
         "",
