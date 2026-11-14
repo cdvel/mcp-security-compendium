@@ -135,15 +135,14 @@ def render(sections, entries, cves):
         "",
         "**Sourced, attributed resources and a CVE tracker for Model Context Protocol security.**",
         "",
+        f"![Last verified {verified}](https://img.shields.io/badge/last_verified-{verified.replace('-', '--')}-2ea44f)",
+        "",
         f"{len(entries)} entries · {len(cves)} advisories · CC BY 4.0",
         "",
         "[Start here](#start-here) · [Contents](#contents) · [CVE tracker](#cve-tracker) · "
         "[Methodology](METHODOLOGY.md) · [Contributing](CONTRIBUTING.md)",
         "",
         "</div>",
-        "",
-        "> [!NOTE]",
-        f"> **Last verified: {verified}.** Every entry and advisory was checked against its source on this date.",
         "",
         "MCP security material is spread across spec pages, lab write-ups, papers and advisory databases, "
         "and some of it predates the 2026-07-28 spec. This list keeps the entries with a credible author "

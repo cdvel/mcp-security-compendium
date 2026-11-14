@@ -4,14 +4,13 @@
 
 **Sourced, attributed resources and a CVE tracker for Model Context Protocol security.**
 
+![Last verified 2026-10-28](https://img.shields.io/badge/last_verified-2026--10--28-2ea44f)
+
 62 entries · 68 advisories · CC BY 4.0
 
 [Start here](#start-here) · [Contents](#contents) · [CVE tracker](#cve-tracker) · [Methodology](METHODOLOGY.md) · [Contributing](CONTRIBUTING.md)
 
 </div>
-
-> [!NOTE]
-> **Last verified: 2026-10-28.** Every entry and advisory was checked against its source on this date.
 
 MCP security material is spread across spec pages, lab write-ups, papers and advisory databases, and some of it predates the 2026-07-28 spec. This list keeps the entries with a credible author and a primary source, organized by the component each one acts on. Every entry names its author and date.
 
