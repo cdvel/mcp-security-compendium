@@ -36,6 +36,8 @@ Not accepted: vendor marketing, gated content, AI-generated listicles, unverifie
 
 Advisories in MCP SDKs, servers, clients and gateways are included. Advisories in general agent tools are included only when the root cause is in MCP handling: configuration, transport, authorization or tool output. A client's protection of its own MCP configuration counts (for example, an agent writing `mcp.json` without approval); a flaw elsewhere that only uses MCP configuration as its payload does not. Excluded advisories and reasons are in `data/cve-exclusions.json`.
 
+A nightly job proposes new advisories in one pull request, each marked `"triage": "pending"` under `database_specific`. To triage one, either set `component` to a section id, write `summary_short` (one plain sentence; not needed for malicious packages) and delete `triage`; or delete the file and add the ID, its aliases and a reason to `data/cve-exclusions.json`. Then run `scripts/generate.py`. CI fails until every candidate is triaged.
+
 ## Attribution
 
 Every entry records author, organization, kind of author, publication date, date added, date last verified, and whether its source is primary or secondary. A secondary write-up can be listed next to a primary source, never alone.
