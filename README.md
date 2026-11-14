@@ -10,7 +10,7 @@
 
 </div>
 
-MCP security material is spread across spec pages, lab write-ups, papers and advisory databases, and some of it predates the 2026-07-28 spec. This list keeps the entries with a credible author and a primary source, organized by the component each one acts on. Every entry names its author and date; threat tags `T1`–`T12` refer to the [CoSAI MCP security taxonomy](https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf).
+MCP security material is spread across spec pages, lab write-ups, papers and advisory databases, and some of it predates the 2026-07-28 spec. This list keeps the entries with a credible author and a primary source, organized by the component each one acts on. Every entry names its author and date.
 
 <details>
 <summary>Terms and threat tags</summary>
