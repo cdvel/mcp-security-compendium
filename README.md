@@ -4,7 +4,7 @@
 
 **Sourced, attributed resources and a CVE tracker for Model Context Protocol security.**
 
-![Last verified 2026-10-28](https://img.shields.io/badge/last_verified-2026--10--28-2ea44f)
+![Entries verified 2026-10-28](https://img.shields.io/badge/entries_verified-2026--10--28-2ea44f) ![Advisories updated](https://img.shields.io/github/last-commit/cdvel/mcp-security-compendium?path=data%2Fcves&label=advisories%20updated) ![Nightly CVE watch status](https://img.shields.io/github/actions/workflow/status/cdvel/mcp-security-compendium/cves.yml?label=nightly%20cve%20watch)
 
 62 entries · 91 advisories · 27 malicious packages · CC BY 4.0
 
