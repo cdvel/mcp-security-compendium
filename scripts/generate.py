@@ -164,7 +164,14 @@ def render(sections, entries, cves):
             "|---|---|---|---|---|---|---|",
         ] + [cve_row(c, {s['id']: s['title'] for s in sections}) for c in cves] + [""]
     verified = max((e["last_verified"] for e in entries), default="never")
-    out += ["---", "", f"Last verified {verified}. Generated from `data/` by `scripts/generate.py`; do not edit by hand.", ""]
+    out += [
+        "---",
+        "",
+        f"Last verified {verified}. Generated from `data/` by `scripts/generate.py`; do not edit by hand.",
+        "",
+        "Content is licensed under [CC BY 4.0](LICENSE); scripts under [MIT](LICENSE-CODE).",
+        "",
+    ]
     return "\n".join(out)
 
 

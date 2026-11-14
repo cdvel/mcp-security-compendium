@@ -212,3 +212,5 @@ Documented exploitation or disclosure involving MCP deployments.
 ---
 
 Last verified 2026-10-28. Generated from `data/` by `scripts/generate.py`; do not edit by hand.
+
+Content is licensed under [CC BY 4.0](LICENSE); scripts under [MIT](LICENSE-CODE).
