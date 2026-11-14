@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Validate data/ and generate README.md.
+"""Validate data/ and generate README.md and CVES.md.
 
 Usage: generate.py [--check]
-  --check  exit 1 if README.md is out of date instead of writing it
+  --check  exit 1 if either file is out of date instead of writing it
 """
 import json
 import sys
@@ -16,6 +16,8 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 README = ROOT / "README.md"
+CVES_MD = ROOT / "CVES.md"
+README_CVES = 20
 
 
 class Loader(yaml.SafeLoader):
@@ -55,6 +57,30 @@ def load_cves():
     for path in sorted((DATA / "cves").glob("*.json")):
         cves.append(json.loads(path.read_text()))
     return sorted(cves, key=lambda c: c.get("published", ""), reverse=True)
+
+
+def check_cves(cves, sections):
+    """Every advisory must be triaged: a known section, a short summary (except malware), not excluded."""
+    known = {s["id"] for s in sections}
+    excluded = set()
+    for x in json.loads((DATA / "cve-exclusions.json").read_text()):
+        excluded |= {x["id"], *x.get("aliases", [])}
+    errors = []
+    for c in cves:
+        db = c.get("database_specific", {})
+        if db.get("triage"):
+            errors.append(f"{c['id']}: not triaged yet (database_specific.triage is set)")
+        if db.get("component") not in known:
+            errors.append(f"{c['id']}: component {db.get('component')!r} is not a section id")
+        if not is_malware(c) and not db.get("summary_short"):
+            errors.append(f"{c['id']}: missing database_specific.summary_short")
+        if {c["id"], *c.get("aliases", [])} & excluded:
+            errors.append(f"{c['id']}: also listed in data/cve-exclusions.json")
+    return errors
+
+
+def is_malware(c):
+    return c["id"].startswith("MAL-")
 
 
 def who(e):
@@ -122,12 +148,51 @@ GLOSSARY = [
 ]
 
 
+def cve_table(cves, titles):
+    return [
+        "| ID | Aliases | Package | Component | Severity | Published | Summary |",
+        "|---|---|---|---|---|---|---|",
+    ] + [cve_row(c, titles) for c in cves]
+
+
+def malware_row(c):
+    pkgs = ", ".join(sorted({a["package"]["name"] for a in c.get("affected", []) if "package" in a}))
+    return f"| [{c['id']}]({advisory_url(c)}) | {pkgs} | {c.get('published', '')[:10]} |"
+
+
+def render_cves(sections, cves):
+    titles = {s["id"]: s["title"] for s in sections}
+    vulns = [c for c in cves if not is_malware(c)]
+    malware = [c for c in cves if is_malware(c)]
+    return "\n".join([
+        "# MCP CVE tracker",
+        "",
+        f"{len(vulns)} advisories and {len(malware)} malicious packages that touch MCP, newest first, stored as "
+        "[OSV](https://ossf.github.io/osv-schema/) records in `data/cves/`. Which advisories are in scope is in "
+        "[CONTRIBUTING.md](CONTRIBUTING.md#cve-tracker); excluded ones are in `data/cve-exclusions.json`. "
+        "Back to the [compendium](README.md).",
+        "",
+        "## Advisories",
+        "",
+    ] + cve_table(vulns, titles) + [
+        "",
+        "## Malicious packages",
+        "",
+        "Packages with MCP in the name or description that OSV reports as malicious.",
+        "",
+        "| ID | Package | Published |",
+        "|---|---|---|",
+    ] + [malware_row(c) for c in malware] + [""])
+
+
 def anchor(title):
     return title.lower().replace(" ", "-")
 
 
 def render(sections, entries, cves):
     verified = max((e["last_verified"] for e in entries), default="never")
+    vulns = [c for c in cves if not is_malware(c)]
+    malware = [c for c in cves if is_malware(c)]
     out = [
         '<div align="center">',
         "",
@@ -137,7 +202,7 @@ def render(sections, entries, cves):
         "",
         f"![Last verified {verified}](https://img.shields.io/badge/last_verified-{verified.replace('-', '--')}-2ea44f)",
         "",
-        f"{len(entries)} entries · {len(cves)} advisories · CC BY 4.0",
+        f"{len(entries)} entries · {len(vulns)} advisories · {len(malware)} malicious packages · CC BY 4.0",
         "",
         "[Start here](#start-here) · [Contents](#contents) · [CVE tracker](#cve-tracker) · "
         "[Methodology](METHODOLOGY.md) · [Contributing](CONTRIBUTING.md)",
@@ -157,7 +222,7 @@ def render(sections, entries, cves):
     for t in toc:
         n = next((counts[s["id"]] for s in sections if s["title"] == t), None)
         if t == "CVE tracker":
-            n = len(cves)
+            n = len(vulns)
         out.append(f"- [{t}](#{anchor(t)})" + (f" ({n})" if n else ""))
     out.append("")
     if start:
@@ -171,11 +236,10 @@ def render(sections, entries, cves):
         out += [
             "## CVE tracker",
             "",
-            f"{len(cves)} advisories, stored as [OSV](https://ossf.github.io/osv-schema/) records in `data/cves/`.",
+            f"The {min(README_CVES, len(vulns))} newest of {len(vulns)} advisories. The full list, and "
+            f"{len(malware)} malicious packages, are in [CVES.md](CVES.md).",
             "",
-            "| ID | Aliases | Package | Component | Severity | Published | Summary |",
-            "|---|---|---|---|---|---|---|",
-        ] + [cve_row(c, {s['id']: s['title'] for s in sections}) for c in cves] + [""]
+        ] + cve_table(vulns[:README_CVES], {s["id"]: s["title"] for s in sections}) + [""]
     out += [
         "---",
         "",
@@ -191,16 +255,20 @@ def main():
     entries, errors = load_entries(schema)
     known = {s["id"] for s in sections}
     errors += [f"{e['slug']}: unknown section {e['section']}" for e in entries if e["section"] not in known]
+    cves = load_cves()
+    errors += check_cves(cves, sections)
     if errors:
         print("\n".join(errors), file=sys.stderr)
         return 1
-    text = render(sections, entries, load_cves())
+    outputs = {README: render(sections, entries, cves), CVES_MD: render_cves(sections, cves)}
     if "--check" in sys.argv:
-        if not README.exists() or README.read_text() != text:
-            print("README.md is out of date; run scripts/generate.py", file=sys.stderr)
+        stale = [p.name for p, text in outputs.items() if not p.exists() or p.read_text() != text]
+        if stale:
+            print(f"{', '.join(stale)} out of date; run scripts/generate.py", file=sys.stderr)
             return 1
         return 0
-    README.write_text(text)
+    for path, text in outputs.items():
+        path.write_text(text)
     print(f"README.md: {len(entries)} entries")
     return 0
 
