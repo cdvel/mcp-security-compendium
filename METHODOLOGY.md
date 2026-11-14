@@ -10,6 +10,9 @@ flowchart LR
     D -->|human approval| E[Publish]
     E --> F[Weekly link check]
     F -->|dead links| D
+    E --> G[Nightly CVE watch]
+    G -->|candidates| H[Human triage]
+    H --> E
 ```
 
 ## Pipeline
@@ -45,6 +48,12 @@ Each entry is checked for:
 - **Install path:** what the documented install runs, and what the tool sends off the machine by default.
 - **Marketing:** product pages presented as research.
 
+## CVE tracker
+
+A nightly job (`.github/workflows/cves.yml`) runs `scripts/cve_watch.py`, which reads OSV's lists of changed records for npm, PyPI, Go, crates.io, Maven, NuGet and GitHub Actions, plus repository advisories that never reach OSV. A record is a candidate when a package name contains `mcp` as a word, a package is already tracked, or its text mentions MCP (rules in `data/cve-watch.yml`). Records already tracked, excluded, known under another ID, withdrawn or marked as GitHub duplicates are skipped.
+
+Candidates go to one open pull request. A maintainer decides each one under the CVE scope rule: in scope gets a section and a one-line summary, out of scope goes to `data/cve-exclusions.json` with a reason, so it is never proposed again. CI fails until every candidate is decided. Advisory text is stored as data; the job never runs it or sends it to a model.
+
 ## Topic rules
 
 These differ from the defaults used across compendiums:
@@ -64,7 +73,9 @@ These differ from the defaults used across compendiums:
 | Seeding (2026-10-28) | 64 entries; 4 dropped on failed checks, 1 merged |
 | CVE tracker (seeding) | 65 advisories; 3 excluded by the scope rule |
 | Adversarial review (2026-10-28) | 54 findings: 2 entries dropped, 24 entries corrected, 1 exclusion reversed, 2 advisories added |
-| Published set | 62 entries, 68 advisories; 2 excluded (`data/cve-exclusions.json`) |
+| Published set (2026-10-28) | 62 entries, 68 advisories; 2 excluded |
+| CVE catch-up (2026-11-14) | 58 candidates since 2026-10-28: 29 advisories and 21 malicious packages added, 8 excluded |
+| Current | 62 entries, 91 advisories, 27 malicious packages; 10 excluded (`data/cve-exclusions.json`) |
 
 ## Limits
 
