@@ -1,0 +1,70 @@
+name: cves
+
+on:
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cve-watch
+
+jobs:
+  watch:
+    name: find new advisories
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # push the candidates branch
+      pull-requests: write # open the pull request, or comment on the open one
+      actions: write # start the data check on the branch
+    env:
+      BRANCH: cve-bot/candidates
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.13"
+      - run: pip install -r scripts/requirements.txt
+      # Build on the open candidates branch so triage commits already pushed there are kept.
+      - name: Check out the candidates branch
+        id: branch
+        run: |
+          if git ls-remote --exit-code --heads origin "$BRANCH" > /dev/null; then
+            git switch --track "origin/$BRANCH"
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            git switch -c "$BRANCH"
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Find advisories changed in the last 72 hours
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/cve_watch.py --hours 72 --report "$RUNNER_TEMP/report.md"
+      # Fails, and writes nothing, while candidates are untriaged; that is expected.
+      - name: Regenerate pages
+        run: python scripts/generate.py || true
+      - name: Commit and open or update the pull request
+        env:
+          EXISTS: ${{ steps.branch.outputs.exists }}
+        run: |
+          git add data/cves README.md CVES.md
+          if git diff --cached --quiet; then
+            echo "Nothing new."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: add cve candidates from nightly watch"
+          git push origin "$BRANCH"
+          if [ "$EXISTS" = "true" ] && [ "$(gh pr view "$BRANCH" --json state --jq .state 2> /dev/null)" = "OPEN" ]; then
+            gh pr comment "$BRANCH" --body-file "$RUNNER_TEMP/report.md"
+          else
+            gh pr create --base main --head "$BRANCH" --title "chore: cve candidates from nightly watch" \
+              --body-file "$RUNNER_TEMP/report.md"
+          fi
+          gh workflow run check.yml --ref "$BRANCH"
