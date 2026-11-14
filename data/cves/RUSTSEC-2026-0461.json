@@ -63,7 +63,7 @@
   "database_specific": {
     "license": "CC0-1.0",
     "component": "servers",
-    "triage": "pending"
+    "summary_short": "Server transport cached tool lookups without limit, including unknown tool names."
   },
   "severity": [
     {

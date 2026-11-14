@@ -64,8 +64,8 @@
     "github_reviewed_at": "2026-07-31T16:05:57Z",
     "nvd_published_at": null,
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "HTTP transport ran MCP tool calls without any authentication."
   },
   "severity": [
     {

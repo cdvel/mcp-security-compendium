@@ -64,8 +64,8 @@
     "github_reviewed_at": "2026-03-02T19:53:41Z",
     "nvd_published_at": "2026-03-02T17:16:34Z",
     "severity": "MODERATE",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "MCP token operations skipped the ownership check, letting users in the same base read, regenerate or delete each other's tokens."
   },
   "severity": [
     {

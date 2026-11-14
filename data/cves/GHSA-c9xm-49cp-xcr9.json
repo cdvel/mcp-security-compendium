@@ -63,8 +63,8 @@
     "github_reviewed_at": "2026-10-02T16:12:31Z",
     "nvd_published_at": null,
     "severity": "MODERATE",
-    "component": "servers",
-    "triage": "pending"
+    "component": "clients_and_hosts",
+    "summary_short": "OAuth client fetched server-supplied resource_metadata URLs without origin or private-network checks."
   },
   "severity": [
     {

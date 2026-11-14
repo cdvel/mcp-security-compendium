@@ -64,8 +64,8 @@
     "github_reviewed_at": "2026-07-31T15:56:12Z",
     "nvd_published_at": null,
     "severity": "MODERATE",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "DQL injection through parameters typed as identifiers bypassed the read tools' limits."
   },
   "severity": [
     {

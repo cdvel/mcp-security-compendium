@@ -72,8 +72,8 @@
     "github_reviewed_at": "2025-09-15T20:30:30Z",
     "nvd_published_at": null,
     "severity": "CRITICAL",
-    "component": "",
-    "triage": "pending"
+    "component": "clients_and_hosts",
+    "summary_short": "Custom MCP feature ran OS commands without sandboxing, allowing remote code execution."
   },
   "severity": [
     {

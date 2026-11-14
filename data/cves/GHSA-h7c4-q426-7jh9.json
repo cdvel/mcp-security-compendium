@@ -63,8 +63,8 @@
     "github_reviewed_at": "2026-11-09T21:14:51Z",
     "nvd_published_at": "2026-11-04T22:18:07Z",
     "severity": "MODERATE",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "One anonymous client could take the shared HTTP session and lock out all other clients."
   },
   "severity": [
     {

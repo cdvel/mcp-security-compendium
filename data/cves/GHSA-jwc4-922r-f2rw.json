@@ -64,8 +64,8 @@
     "github_reviewed_at": "2026-10-29T20:58:04Z",
     "nvd_published_at": "2026-10-23T15:17:23Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Arbitrary code execution through base branch resolution."
   },
   "severity": [
     {

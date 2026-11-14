@@ -63,8 +63,8 @@
     "github_reviewed_at": "2026-07-29T15:36:19Z",
     "nvd_published_at": null,
     "severity": "LOW",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Notebook tool skipped the human-approval prompt the other write tools use."
   },
   "severity": [
     {

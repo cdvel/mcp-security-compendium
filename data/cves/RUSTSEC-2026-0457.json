@@ -63,7 +63,7 @@
   ],
   "database_specific": {
     "license": "CC0-1.0",
-    "component": "servers",
-    "triage": "pending"
+    "component": "clients_and_hosts",
+    "summary_short": "OAuth client SSRF filter checked host strings, not resolved addresses."
   }
 }

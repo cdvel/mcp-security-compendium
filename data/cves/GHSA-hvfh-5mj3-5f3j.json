@@ -109,8 +109,8 @@
     "github_reviewed_at": "2026-08-25T19:21:40Z",
     "nvd_published_at": null,
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "clients_and_hosts",
+    "summary_short": "MCP SSE and streamable HTTP connections allowed unauthenticated SSRF to internal networks when MCP is enabled."
   },
   "severity": [
     {

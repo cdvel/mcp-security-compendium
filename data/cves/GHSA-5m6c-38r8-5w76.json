@@ -69,8 +69,8 @@
     "github_reviewed_at": "2026-11-10T15:56:49Z",
     "nvd_published_at": "2026-11-05T23:16:49Z",
     "severity": "MODERATE",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "MCP tools bypassed the path containment fix, allowing YAML file reads outside the workspace."
   },
   "severity": [
     {
