@@ -1,0 +1,318 @@
+# Source map: the sources kept at review (2026-10-28) and the entry each became.
+# `merge` means the source was added to that entry's `sources`. Candidates that were dropped, and the
+# reasons, stay in the maintainer's notes; the counts at each stage are in METHODOLOGY.md.
+- section: specification_and_authorization
+  title: 'MCP Specification 2026-07-28: Key Changes'
+  url: https://modelcontextprotocol.io/specification/2026-07-28/changelog
+  decision: keep
+  entry: mcp-spec-2026-07-28-changelog
+- section: specification_and_authorization
+  title: Authorization (2026-07-28)
+  url: https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization
+  decision: keep
+  entry: mcp-authorization-2026-07-28
+- section: specification_and_authorization
+  title: Authorization Security Considerations (2026-07-28)
+  url: https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/security-considerations
+  decision: keep
+  entry: mcp-authorization-security-considerations
+- section: specification_and_authorization
+  title: Security Best Practices (2026-07-28)
+  url: https://modelcontextprotocol.io/specification/2026-07-28/basic/security_best_practices
+  decision: keep
+  entry: mcp-security-best-practices
+- section: specification_and_authorization
+  title: 'SEP-991: URL-based client registration (CIMD)'
+  url: https://modelcontextprotocol.io/seps/991-enable-url-based-client-registration-using-oauth-c
+  decision: keep
+  entry: sep-991-cimd
+- section: specification_and_authorization
+  title: MCP Authorization Extensions (ext-auth)
+  url: https://github.com/modelcontextprotocol/ext-auth
+  decision: keep
+  entry: mcp-ext-auth
+- section: specification_and_authorization
+  title: OAuth Client ID Metadata Document (draft -02)
+  url: https://datatracker.ietf.org/doc/draft-ietf-oauth-client-id-metadata-document/
+  decision: keep
+  entry: oauth-cimd-draft
+- section: specification_and_authorization
+  title: 'RFC 9207: Authorization Server Issuer Identification'
+  url: https://datatracker.ietf.org/doc/rfc9207/
+  decision: keep
+  entry: rfc-9207
+- section: specification_and_authorization
+  title: 'RFC 9728: Protected Resource Metadata'
+  url: https://datatracker.ietf.org/doc/rfc9728/
+  decision: keep
+  entry: rfc-9728
+- section: clients_and_hosts
+  title: 'OWASP: Securely Using Third-Party MCP Servers 1.0'
+  url: https://genai.owasp.org/resource/cheatsheet-a-practical-guide-for-securely-using-third-party-mcp-servers-1-0/
+  decision: keep
+  entry: owasp-securely-using-third-party-mcp-servers
+- section: clients_and_hosts
+  title: Snyk Agent Scan (formerly mcp-scan)
+  url: https://github.com/snyk/agent-scan
+  decision: keep
+  entry: snyk-agent-scan
+- section: clients_and_hosts
+  title: ToolHive
+  url: https://github.com/stacklok/toolhive
+  decision: keep
+  entry: toolhive
+- section: clients_and_hosts
+  title: Wassette
+  url: https://github.com/microsoft/wassette
+  decision: keep
+  entry: wassette
+- section: clients_and_hosts
+  title: hyper-mcp
+  url: https://github.com/hyper-mcp-rs/hyper-mcp
+  decision: keep
+  entry: hyper-mcp
+- section: clients_and_hosts
+  title: mcp-context-protector
+  url: https://github.com/trailofbits/mcp-context-protector
+  decision: keep
+  entry: mcp-context-protector
+- section: servers
+  title: 'OWASP: Secure MCP Server Development'
+  url: https://genai.owasp.org/resource/a-practical-guide-for-secure-mcp-server-development/
+  decision: keep
+  entry: owasp-secure-mcp-server-development
+- section: servers
+  title: Cisco AI Defense MCP Scanner
+  url: https://github.com/cisco-ai-defense/mcp-scanner
+  decision: keep
+  entry: cisco-mcp-scanner
+- section: servers
+  title: Ramparts
+  url: https://github.com/highflame-ai/ramparts
+  decision: keep
+  entry: ramparts
+- section: servers
+  title: mcp-watch
+  url: https://github.com/kapilduraphe/mcp-watch
+  decision: keep
+  entry: mcp-watch
+- section: servers
+  title: Spring AI MCP Security
+  url: https://github.com/spring-ai-community/mcp-security
+  decision: keep
+  entry: spring-ai-mcp-security
+- section: servers
+  title: FastMCP (auth and middleware)
+  url: https://github.com/PrefectHQ/fastmcp
+  decision: keep
+  entry: fastmcp-auth-middleware
+- section: servers
+  title: workers-oauth-provider
+  url: https://github.com/cloudflare/workers-oauth-provider
+  decision: keep
+  entry: workers-oauth-provider
+- section: gateways_and_proxies
+  title: ContextForge MCP Gateway
+  url: https://github.com/IBM/mcp-context-forge
+  decision: keep
+  entry: contextforge-mcp-gateway
+- section: gateways_and_proxies
+  title: Microsoft MCP Gateway
+  url: https://github.com/microsoft/mcp-gateway
+  decision: keep
+  entry: microsoft-mcp-gateway
+- section: gateways_and_proxies
+  title: Docker MCP Gateway
+  url: https://github.com/docker/mcp-gateway
+  decision: keep
+  entry: docker-mcp-gateway
+- section: gateways_and_proxies
+  title: agentgateway
+  url: https://github.com/agentgateway/agentgateway
+  decision: keep
+  entry: agentgateway
+- section: gateways_and_proxies
+  title: Lasso MCP Gateway
+  url: https://github.com/lasso-security/mcp-gateway
+  decision: keep
+  entry: lasso-mcp-gateway
+- section: gateways_and_proxies
+  title: MCP Gateway & Registry
+  url: https://github.com/agentic-community/mcp-gateway-registry
+  decision: keep
+  entry: mcp-gateway-registry
+- section: gateways_and_proxies
+  title: MCP Auth Proxy
+  url: https://github.com/sigbit/mcp-auth-proxy
+  decision: keep
+  entry: mcp-auth-proxy
+- section: gateways_and_proxies
+  title: MCPProxy (mcpproxy-go)
+  url: https://github.com/smart-mcp-proxy/mcpproxy-go
+  decision: keep
+  entry: mcpproxy-go
+- section: gateways_and_proxies
+  title: GitHub Agentic Workflows MCP Gateway
+  url: https://github.com/github/gh-aw-mcpg
+  decision: keep
+  entry: gh-aw-mcp-gateway
+- section: gateways_and_proxies
+  title: Archestra
+  url: https://github.com/archestra-ai/archestra
+  decision: keep
+  entry: archestra
+- section: gateways_and_proxies
+  title: Pipelock
+  url: https://github.com/pipelab-org/pipelock
+  decision: keep
+  entry: pipelock
+- section: research
+  title: OWASP MCP Top 10
+  url: https://owasp.org/www-project-mcp-top-10/
+  decision: keep
+  entry: owasp-mcp-top-10
+- section: research
+  title: 'CoSAI: Model Context Protocol (MCP) Security'
+  url: https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf
+  decision: keep
+  entry: cosai-mcp-security
+- section: research
+  title: NSA CSI on MCP security
+  url: https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf
+  decision: keep
+  entry: nsa-csi-mcp-security
+- section: research
+  title: Tool Poisoning Attacks
+  url: https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks
+  decision: keep
+  entry: invariant-tool-poisoning
+- section: research
+  title: Jumping the line
+  url: https://blog.trailofbits.com/2025/04/21/jumping-the-line-how-mcp-servers-can-attack-you-before-you-ever-use-them/
+  decision: keep
+  entry: tob-line-jumping
+- section: research
+  title: How MCP servers can steal your conversation history
+  url: https://blog.trailofbits.com/2025/04/23/how-mcp-servers-can-steal-your-conversation-history/
+  decision: keep
+  entry: tob-conversation-history-theft
+- section: research
+  title: Prompt Injection Attack Vectors Through MCP Sampling
+  url: https://unit42.paloaltonetworks.com/model-context-protocol-attack-vectors/
+  decision: keep
+  entry: unit42-mcp-sampling-attacks
+- section: research
+  title: 'MCP: Landscape, Security Threats, and Future Research Directions'
+  url: https://arxiv.org/abs/2503.23278
+  decision: keep
+  entry: mcp-landscape-threats
+- section: research
+  title: MCP Safety Audit
+  url: https://arxiv.org/abs/2504.03767
+  decision: keep
+  entry: mcp-safety-audit
+- section: research
+  title: MCPSecBench
+  url: https://arxiv.org/abs/2508.13220
+  decision: keep
+  entry: mcpsecbench
+- section: research
+  title: MCP Security Bench (MSB)
+  url: https://arxiv.org/abs/2510.15994
+  decision: keep
+  entry: mcp-security-bench-msb
+- section: research
+  title: MCPTox
+  url: https://arxiv.org/abs/2508.14925
+  decision: keep
+  entry: mcptox
+- section: research
+  title: MCPXKIT
+  url: https://arxiv.org/abs/2508.12538
+  decision: keep
+  entry: mcpxkit
+- section: research
+  title: 'MPMA: Preference Manipulation Attack'
+  url: https://arxiv.org/abs/2505.11154
+  decision: keep
+  entry: mpma-preference-manipulation
+- section: registries_and_supply_chain
+  title: 'The MCP Registry (official docs: About / Trust and Security)'
+  url: https://modelcontextprotocol.io/registry/about
+  decision: keep
+  entry: mcp-registry-about
+- section: registries_and_supply_chain
+  title: 'MCP Registry: Authentication (GitHub OAuth/OIDC, DNS TXT, HTTP well-known)'
+  url: https://modelcontextprotocol.io/registry/authentication
+  decision: keep
+  entry: mcp-registry-authentication
+- section: registries_and_supply_chain
+  title: 'MCP Registry: Supported Package Types (ownership verification per ecosystem)'
+  url: https://modelcontextprotocol.io/registry/package-types
+  decision: merge
+  entry: mcp-registry-about
+- section: registries_and_supply_chain
+  title: 'First Malicious MCP in the Wild: The Postmark Backdoor That''s Stealing Your Emails'
+  url: https://www.koi.security/blog/postmark-mcp-npm-malicious-backdoor-email-theft
+  decision: keep
+  entry: koi-postmark-mcp-backdoor
+- section: registries_and_supply_chain
+  title: 3 Malicious MCP servers found on PyPI
+  url: https://research.jfrog.com/post/3-malicious-mcps-pypi-reverse-shell/
+  decision: keep
+  entry: jfrog-malicious-mcp-pypi
+- section: registries_and_supply_chain
+  title: 'From Path Traversal to Supply Chain Compromise: Breaking MCP Server Hosting (Smithery.ai)'
+  url: https://blog.gitguardian.com/breaking-mcp-server-hosting/
+  decision: keep
+  entry: gitguardian-smithery-hosting
+- section: incidents
+  title: 'WhatsApp MCP Exploited: Exfiltrating your message history via MCP'
+  url: https://invariantlabs.ai/blog/whatsapp-mcp-exploited
+  decision: keep
+  entry: whatsapp-mcp-exploited
+- section: incidents
+  title: 'GitHub MCP Exploited: Accessing private repositories via MCP'
+  url: https://invariantlabs.ai/blog/mcp-github-vulnerability
+  decision: keep
+  entry: github-mcp-exploited
+- section: incidents
+  title: Critical RCE Vulnerability in Anthropic MCP Inspector - CVE-2025-49596
+  url: https://www.oligo.security/blog/critical-rce-vulnerability-in-anthropic-mcp-inspector-cve-2025-49596
+  decision: keep
+  entry: mcp-inspector-rce-cve-2025-49596
+- section: incidents
+  title: OS command injection in mcp-remote when connecting to untrusted MCP servers (JFSA-2025-001290844)
+  url: https://research.jfrog.com/vulnerabilities/mcp-remote-command-injection-rce-jfsa-2025-001290844/
+  decision: keep
+  entry: mcp-remote-command-injection
+- section: incidents
+  title: 'EscapeRoute: Breaking the Scope of Anthropic''s Filesystem MCP Server (CVE-2025-53109/53110)'
+  url: https://cymulate.com/blog/cve-2025-53109-53110-escaperoute-anthropic/
+  decision: keep
+  entry: escaperoute-filesystem-mcp
+- section: incidents
+  title: 'Supabase MCP Security: How Prompt Injection Leaked Private Tables'
+  url: https://generalanalysis.com/blog/supabase-mcp-blog
+  decision: keep
+  entry: supabase-mcp-prompt-injection
+- section: incidents
+  title: 'Cursor IDE: Persistent Code Execution via MCP Trust Bypass (CVE-2025-54136, MCPoison)'
+  url: https://blog.checkpoint.com/research/cursor-ide-persistent-code-execution-via-mcp-trust-bypass/
+  decision: keep
+  entry: cursor-mcpoison
+- section: incidents
+  title: 'CurXecute: Cursor RCE via prompt-injected mcp.json (CVE-2025-54135) (secondary: The Hacker News)'
+  url: https://thehackernews.com/2025/08/cursor-ai-code-editor-fixed-flaw.html
+  decision: keep
+  entry: cursor-curxecute
+- section: incidents
+  title: 'PromptJacking: critical RCE in Claude Desktop extensions (Chrome, iMessage, Apple Notes)'
+  url: https://www.koi.ai/blog/promptjacking-the-critical-rce-in-claude-desktop-that-turn-questions-into-exploits
+  decision: keep
+  entry: promptjacking-claude-desktop
+- section: incidents
+  title: 'Anthropic quietly fixed flaws in its Git MCP server that allowed for remote code execution (secondary: The Register)'
+  url: https://www.theregister.com/2026/01/20/anthropic_prompt_injection_flaws/
+  decision: keep
+  entry: mcp-server-git-advisories
