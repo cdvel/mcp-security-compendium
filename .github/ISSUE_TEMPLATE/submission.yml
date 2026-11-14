@@ -1,0 +1,81 @@
+name: Submit a resource
+description: Suggest one entry for the compendium.
+title: "Add: "
+labels: [submission]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One entry per issue. The bar is in [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md#inclusion-criteria): one strong signal or two supporting signals, plus a primary source.
+  - type: input
+    id: url
+    attributes:
+      label: Primary source
+      description: The repo, paper, advisory, spec or write-up itself, not a post about it.
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Title
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author and organization
+      placeholder: Jane Doe (Example Lab)
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Specification and authorization
+        - Clients and hosts
+        - Servers
+        - Gateways and proxies
+        - Registries and supply chain
+        - Threat models and research
+        - Incidents
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options: [spec, guide, taxonomy, paper, writeup, tool, advisory, dataset]
+    validations:
+      required: true
+  - type: textarea
+    id: signals
+    attributes:
+      label: Signals
+      description: Which signals from CONTRIBUTING.md it meets, with evidence (star and contributor counts, the CVE, the venue, the lab).
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One objective sentence on what it is and covers, ending in a period. No sales language.
+    validations:
+      required: true
+  - type: input
+    id: affiliation
+    attributes:
+      label: Your relationship to it
+      description: For example author, employer, contributor, or none.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Checks
+      options:
+        - label: I wrote this submission myself; it is not agent-generated.
+          required: true
+        - label: It is not already listed in the README.
+          required: true

@@ -1,0 +1,33 @@
+name: Report a correction
+description: An entry or advisory is wrong or out of date.
+title: "Fix: "
+labels: [correction]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry
+      description: The entry title, or the advisory ID from the CVE tracker.
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: Problem
+      options:
+        - Dead or moved link
+        - Wrong author, organization or date
+        - Description not supported by the source
+        - Signals no longer hold
+        - Archived, withdrawn or disputed
+        - Wrong section
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What is wrong and what it should say, with a link to the evidence.
+    validations:
+      required: true
