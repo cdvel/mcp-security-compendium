@@ -63,8 +63,8 @@
     "github_reviewed_at": "2026-07-31T16:01:07Z",
     "nvd_published_at": null,
     "severity": "MODERATE",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Workflow tool allowed template injection that exfiltrates event data."
   },
   "severity": [
     {

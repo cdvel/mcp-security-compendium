@@ -68,8 +68,8 @@
     "github_reviewed_at": "2026-10-27T14:43:57Z",
     "nvd_published_at": null,
     "severity": "MODERATE",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "MCP file tool's blocklist missed sensitive files the HTTP API protects, exposing publish-mode passwords."
   },
   "severity": [
     {

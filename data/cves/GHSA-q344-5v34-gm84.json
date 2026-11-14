@@ -65,8 +65,8 @@
     "github_reviewed_at": "2026-10-29T16:34:35Z",
     "nvd_published_at": null,
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "HTTP transport ignored the configured API key and accepted unauthenticated requests."
   },
   "severity": [
     {

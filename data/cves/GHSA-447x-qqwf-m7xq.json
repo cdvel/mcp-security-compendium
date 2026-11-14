@@ -71,8 +71,8 @@
     "github_reviewed_at": "2026-11-09T21:10:46Z",
     "nvd_published_at": "2026-11-04T22:18:07Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "HTTP mode buffered request bodies without a size limit, allowing remote denial of service."
   },
   "severity": [
     {

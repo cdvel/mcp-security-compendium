@@ -82,8 +82,8 @@
     "github_reviewed_at": "2026-11-09T22:16:41Z",
     "nvd_published_at": "2026-11-05T21:18:54Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Structural search and replace tools followed symlinks out of the project, allowing file reads and overwrites."
   },
   "severity": [
     {

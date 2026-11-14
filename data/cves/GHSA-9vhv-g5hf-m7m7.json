@@ -299,8 +299,8 @@
     "github_reviewed_at": "2026-11-09T22:01:34Z",
     "nvd_published_at": "2026-11-06T21:17:05Z",
     "severity": "MODERATE",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "The serve command bound to all interfaces without authentication; with shell access enabled, that allowed remote command execution."
   },
   "severity": [
     {

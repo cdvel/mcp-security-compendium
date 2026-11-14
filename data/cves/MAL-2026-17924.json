@@ -261,8 +261,7 @@
         "source": "ghsa-malware"
       }
     ],
-    "component": "",
-    "triage": "pending",
+    "component": "registries_and_supply_chain",
     "severity": "MALICIOUS"
   },
   "credits": [

@@ -64,8 +64,8 @@
     "github_reviewed_at": "2026-09-09T23:49:20Z",
     "nvd_published_at": "2026-10-28T14:17:04Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Version tool passed an unchecked package alias to pnpm install, allowing code execution."
   },
   "severity": [
     {

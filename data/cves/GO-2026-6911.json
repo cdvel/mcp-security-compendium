@@ -54,8 +54,8 @@
   "database_specific": {
     "review_status": "REVIEWED",
     "url": "https://pkg.go.dev/vuln/GO-2026-6911",
-    "component": "",
-    "triage": "pending"
+    "component": "clients_and_hosts",
+    "summary_short": "Client followed redirects to any host and sent OAuth tokens and custom headers along."
   },
   "credits": [
     {

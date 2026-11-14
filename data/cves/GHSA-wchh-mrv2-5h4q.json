@@ -63,8 +63,8 @@
     "github_reviewed_at": "2026-11-09T21:51:28Z",
     "nvd_published_at": "2026-11-04T23:17:58Z",
     "severity": "MODERATE",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Spoofed X-Forwarded-For headers bypassed the MCP and API token IP allowlist."
   },
   "severity": [
     {

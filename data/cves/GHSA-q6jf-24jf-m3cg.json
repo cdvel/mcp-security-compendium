@@ -487,8 +487,8 @@
     "github_reviewed_at": "2026-11-11T00:31:23Z",
     "nvd_published_at": null,
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "clients_and_hosts",
+    "summary_short": "Deprecated MCP configuration scanner wrote configuration content to insecure temporary files."
   },
   "severity": [
     {

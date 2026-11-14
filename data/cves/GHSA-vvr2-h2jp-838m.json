@@ -78,8 +78,8 @@
     "github_reviewed_at": "2026-11-09T21:21:32Z",
     "nvd_published_at": "2026-11-05T20:18:00Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Paginated read_file MCP tool allowed path traversal and arbitrary file reads."
   },
   "severity": [
     {
