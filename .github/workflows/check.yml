@@ -4,6 +4,8 @@ on:
   pull_request:
   push:
     branches: [main]
+  # The nightly CVE watch starts this on its branch, since its own pushes don't trigger workflows.
+  workflow_dispatch:
 
 permissions:
   contents: read
