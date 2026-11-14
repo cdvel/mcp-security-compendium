@@ -8,17 +8,19 @@ flowchart LR
     B -->|human review| C[Seed entries]
     C --> D[Adversarial review]
     D -->|human approval| E[Publish]
-    E --> F[Nightly checks]
-    F -->|drift or new advisories| D
+    E --> F[Weekly link check]
+    F -->|dead links| D
 ```
 
 ## Pipeline
 
 1. **Gather.** Candidates come from the MCP specification and its maintainers, standards bodies (OWASP, CoSAI, IETF), government guidance (NSA), research labs, academic papers (arXiv, with peer-reviewed versions where they exist), and advisory databases (GitHub Security Advisories, OSV).
-2. **Source map.** Every candidate is listed with its section, author, strongest signal and a proposed keep or drop. A maintainer decides each row before anything is written. Rows that depend on a check carry a condition, and the row is dropped if the check fails.
+2. **Source map.** Every candidate is listed with its section, author, strongest signal and a proposed keep or drop. A maintainer decides each row before anything is written. Rows that depend on a check carry a condition, and the row is dropped if the check fails. `data/source-map.yml` lists the kept sources and the entry each became.
 3. **Seed.** Each kept row becomes one entry file in `data/entries/`, checked against the schema in `schema/entry.schema.json`.
 4. **Adversarial review.** A separate pass looks for reasons each entry should not be listed (see below). A maintainer approves every change.
 5. **Publish.** `README.md` is generated from the data by `scripts/generate.py`. Nobody edits it by hand.
+
+AI agents were used to gather candidates, draft entries and run the adversarial review. A maintainer made every keep, drop and wording decision.
 
 ## Verification
 
