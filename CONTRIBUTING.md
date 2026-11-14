@@ -50,4 +50,8 @@ Every new entry gets an adversarial review before approval: signal manipulation,
 
 ## Submissions
 
-Submissions must come from a human. Agent-generated submissions are closed.
+Open an issue with the *Submit a resource* form, one entry per issue; use *Report a correction* for an entry or advisory that is wrong or out of date. Submissions must come from a human. Agent-generated submissions are closed.
+
+## License
+
+By contributing you agree that your contribution is licensed under [CC BY 4.0](LICENSE) for content and [MIT](LICENSE-CODE) for scripts.
