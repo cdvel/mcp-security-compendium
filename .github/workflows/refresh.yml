@@ -1,0 +1,50 @@
+name: refresh
+
+on:
+  schedule:
+    - cron: "0 5 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repo-refresh
+
+jobs:
+  refresh:
+    name: refresh repository facts
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # push the refresh branch
+      pull-requests: write # open the pull request
+      actions: write # start the data check on the branch
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.13"
+      - run: pip install -r scripts/requirements.txt
+      - name: Refresh repository entries from the GitHub API
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/refresh.py --report "$RUNNER_TEMP/report.md"
+      - run: python scripts/generate.py
+      - name: Commit and open a pull request
+        run: |
+          git add data/entries README.md CVES.md
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          branch="bot/repo-refresh-$(date -u +%Y-%m-%d)"
+          git switch -c "$branch"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh repository facts"
+          git push origin "$branch"
+          gh pr create --base main --head "$branch" --title "chore: refresh repository facts" \
+            --body-file "$RUNNER_TEMP/report.md"
+          gh workflow run check.yml --ref "$branch"
