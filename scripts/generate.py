@@ -99,7 +99,8 @@ def by_line(e):
     tag_str = " ".join(f"`{t}`" for t in tags)
     also = ", ".join(f"[{site(u)}]({u})" for u in e.get("sources", []))
     also = f" Also: {also}." if also else ""
-    return f"- [{e['title']}]({e['url']}) by {who(e)} · {e['published']} · {e['description']}{also} {tag_str}".rstrip()
+    status = " (archived)" if e.get("archived") else ""
+    return f"- [{e['title']}]({e['url']}){status} by {who(e)} · {e['published']} · {e['description']}{also} {tag_str}".rstrip()
 
 
 def site(url):

@@ -27,11 +27,14 @@ class JudgeTest(unittest.TestCase):
         self.assertEqual(len([n for n in notes if n.startswith("dropped")]), 3)
         self.assertNotIn("**below the inclusion bar**", notes)
 
-    def test_below_bar_archived_and_stale_are_flagged(self):
-        _, notes = refresh.judge(["stars"], facts(stars=150, pushed="2025-06-01T00:00:00Z", archived=True), TODAY)
-        for flag in ("**archived**", "**below the inclusion bar**"):
-            self.assertIn(flag, notes)
+    def test_below_bar_and_stale_are_flagged(self):
+        _, notes = refresh.judge(["stars"], facts(stars=150, pushed="2025-06-01T00:00:00Z"), TODAY)
+        self.assertIn("**below the inclusion bar**", notes)
         self.assertTrue(any(n.startswith("**no push for 12 months**") for n in notes))
+
+    def test_archived_is_noted_not_flagged(self):
+        _, notes = refresh.judge(["stars", "contributors"], facts(pushed="2025-06-01T00:00:00Z", archived=True), TODAY)
+        self.assertEqual(notes, ["archived"])
 
     def test_two_supporting_signals_meet_the_bar(self):
         _, notes = refresh.judge(["stars", "contributors"], facts(stars=150, contributors=5), TODAY)

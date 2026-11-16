@@ -5,8 +5,9 @@ Usage: refresh.py [--dry-run] [--report FILE]
 
 For each repo entry: reads the GitHub API (GITHUB_TOKEN if set), records stars, contributors, pushed_at,
 archived and license, follows renames, drops the stars / contributors / active signals that no longer meet
-the thresholds in CONTRIBUTING.md, and sets last_verified to today. Entries that are archived, stale or
-below the inclusion bar are listed in the report for a maintainer; nothing is deleted.
+the thresholds in CONTRIBUTING.md, and sets last_verified to today. Archived projects stay listed and the
+README marks them archived. Entries that are stale or below the inclusion bar are listed in the report for a
+maintainer; nothing is deleted.
 """
 import argparse
 import json
@@ -81,9 +82,9 @@ def judge(signals, facts, today):
     supporting = ("stars" in keep and facts["stars"] < STARS_STRONG) + \
         ("contributors" in keep and facts["contributors"] < CONTRIB_STRONG) + \
         ("active" in keep) + ("cited_by_strong" in keep) + bool({"docs", "security_policy"} & set(keep))
-    if facts["archived"]:
-        notes.append("**archived**")
-    if today - pushed > timedelta(days=STALE_DAYS):
+    if facts["archived"]:  # marked in the README, not a question for the maintainer
+        notes.append("archived")
+    elif today - pushed > timedelta(days=STALE_DAYS):
         notes.append(f"**no push for 12 months** (last {facts['pushed_at'][:10]})")
     if not strong and supporting < 2:
         notes.append("**below the inclusion bar**")
