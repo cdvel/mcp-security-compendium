@@ -5,10 +5,15 @@ org: Microsoft
 author_kind: vendor_lab
 published: 2025-05-14
 added: 2026-10-28
-last_verified: 2026-10-28
+last_verified: '2026-11-16'
 source_type: primary
 section: gateways_and_proxies
 kind: tool
 signals: [stars, contributors, security_policy]
 threats: [T1, T2]
+stars: 920
+contributors: 9
+pushed_at: '2026-11-13T21:55:26Z'
+archived: false
+license: MIT
 description: Reverse proxy and management layer for MCP servers on Kubernetes with request routing, authorization and server lifecycle management; current version supports only 2026-07-28 spec clients.

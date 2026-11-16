@@ -5,7 +5,7 @@ org: Linux Foundation
 author_kind: project_maintainers
 published: 2025-03-18
 added: 2026-10-28
-last_verified: 2026-10-28
+last_verified: '2026-11-16'
 source_type: primary
 section: gateways_and_proxies
 kind: tool
@@ -13,4 +13,9 @@ signals: [stars, contributors, active, cve, security_policy]
 threats: [T1, T2, T7]
 sources:
   - https://github.com/advisories/GHSA-v2x6-wwfw-r2rq
+stars: 6204
+contributors: 297
+pushed_at: '2026-11-15T08:23:31Z'
+archived: false
+license: Apache-2.0
 description: Linux Foundation proxy for agent traffic, including MCP and A2A, with authentication, authorization policy and observability for connections between agents and tool servers.

@@ -5,10 +5,15 @@ org: GitHub
 author_kind: vendor_lab
 published: 2025-12-10
 added: 2026-10-28
-last_verified: 2026-10-28
+last_verified: '2026-11-16'
 source_type: primary
 section: gateways_and_proxies
 kind: tool
 signals: [contributors, stars, active, security_policy]
 threats: [T2, T9, T5]
+stars: 189
+contributors: 25
+pushed_at: '2026-11-16T00:53:42Z'
+archived: false
+license: MIT
 description: MCP gateway used by GitHub Agentic Workflows to give sandboxed agents access to MCP servers, with guard policies that restrict which repositories and content a workflow can reach.

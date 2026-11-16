@@ -5,7 +5,7 @@ org: Stacklok
 author_kind: vendor_lab
 published: '2025-03-12'
 added: '2026-10-28'
-last_verified: '2026-10-28'
+last_verified: '2026-11-16'
 source_type: primary
 section: clients_and_hosts
 kind: tool
@@ -13,4 +13,9 @@ signals: [stars, contributors, active, security_policy]
 threats: [T8, T9, T2]
 sources:
 - https://docs.stacklok.com/toolhive/
+stars: 2342
+contributors: 140
+pushed_at: '2026-11-15T21:14:12Z'
+archived: false
+license: Apache-2.0
 description: Runs each MCP server in an isolated container with a minimal permission profile, plus optional access policy, a gateway, a registry and a Kubernetes operator; sends usage metrics to Stacklok by default (opt-out available).

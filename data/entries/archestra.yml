@@ -5,10 +5,15 @@ org: Archestra
 author_kind: vendor_lab
 published: '2025-07-15'
 added: '2026-10-28'
-last_verified: '2026-10-28'
+last_verified: '2026-11-16'
 source_type: primary
 section: gateways_and_proxies
 kind: tool
 signals: [contributors, active]
 threats: [T1, T4, T2]
+stars: 4445
+contributors: 88
+pushed_at: '2026-11-16T01:47:13Z'
+archived: false
+license: NOASSERTION
 description: Open-core platform with an MCP gateway supporting OAuth and on-behalf-of authentication, a private MCP registry, a Kubernetes MCP orchestrator and guardrail policies; released images send analytics to the vendor by default.

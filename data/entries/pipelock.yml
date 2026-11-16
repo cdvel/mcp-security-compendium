@@ -5,10 +5,15 @@ org: PipeLab
 author_kind: vendor_lab
 published: '2026-02-08'
 added: '2026-10-28'
-last_verified: '2026-10-28'
+last_verified: '2026-11-16'
 source_type: primary
 section: gateways_and_proxies
 kind: tool
 signals: [contributors, active, security_policy]
 threats: [T5, T4, T12]
+stars: 994
+contributors: 12
+pushed_at: '2026-11-16T01:57:39Z'
+archived: false
+license: Apache-2.0
 description: Open-core egress proxy and MCP wrapper that scans agent HTTP, MCP, A2A and WebSocket traffic for secret exfiltration, SSRF and prompt injection, and writes signed receipts of its decisions.

@@ -5,7 +5,7 @@ org: Highflame
 author_kind: vendor_lab
 published: "2025-07-23"
 added: "2026-10-28"
-last_verified: "2026-10-28"
+last_verified: '2026-11-16'
 source_type: primary
 section: servers
 kind: tool
@@ -13,4 +13,9 @@ signals: [contributors, active]
 threats: [T4, T11]
 sources:
   - https://www.highflame.com/blog/ramparts-mcp-scan
+stars: 99
+contributors: 14
+pushed_at: '2026-10-08T05:35:30Z'
+archived: false
+license: Apache-2.0
 description: Rust scanner for MCP servers and agent skill files using YARA rules, optional LLM analysis, cross-origin tool checks and OSV.dev lookups for stdio server packages.

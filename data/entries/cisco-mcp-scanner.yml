@@ -5,10 +5,15 @@ org: Cisco
 author_kind: vendor_lab
 published: "2025-09-24"
 added: "2026-10-28"
-last_verified: "2026-10-28"
+last_verified: '2026-11-16'
 source_type: primary
 section: servers
 kind: tool
 signals: [stars, contributors, active, security_policy]
 threats: [T4, T11]
+stars: 1118
+contributors: 33
+pushed_at: '2026-11-15T20:03:55Z'
+archived: false
+license: Apache-2.0
 description: Scanner for MCP tools, prompts, resources and server source using YARA rules, an LLM analyzer and the Cisco AI Defense API; the LLM and Cisco engines need API keys and send content to those services.

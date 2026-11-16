@@ -5,10 +5,15 @@ org: Cloudflare
 author_kind: vendor_lab
 published: "2025-03-11"
 added: "2026-10-28"
-last_verified: "2026-10-28"
+last_verified: '2026-11-16'
 source_type: primary
 section: servers
 kind: tool
 signals: [stars, contributors, active, security_policy]
 threats: [T1, T2]
+stars: 1897
+contributors: 30
+pushed_at: '2026-11-10T19:51:16Z'
+archived: false
+license: MIT
 description: OAuth 2.1 authorization server and resource-server library for remote MCP servers on Cloudflare Workers, targeting MCP authorization 2026-07-28 with PKCE, CIMD, DCR, audiences and token exchange.

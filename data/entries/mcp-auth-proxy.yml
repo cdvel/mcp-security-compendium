@@ -5,10 +5,15 @@ org: SigBit Lab
 author_kind: independent
 published: 2025-08-14
 added: 2026-10-28
-last_verified: 2026-10-28
+last_verified: '2026-11-16'
 source_type: primary
 section: gateways_and_proxies
 kind: tool
 signals: [contributors, stars, active]
 threats: [T1, T2]
+stars: 188
+contributors: 17
+pushed_at: '2026-11-15T05:20:32Z'
+archived: false
+license: MIT
 description: OAuth 2.1/OIDC proxy placed in front of stdio, SSE or HTTP MCP servers, authenticating users via Google, GitHub or any OIDC provider with pattern-based user authorization.
