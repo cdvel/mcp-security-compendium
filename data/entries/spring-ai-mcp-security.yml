@@ -5,10 +5,15 @@ org: Spring AI Community
 author_kind: project_maintainers
 published: "2025-08-01"
 added: "2026-10-28"
-last_verified: "2026-10-28"
+last_verified: '2026-11-16'
 source_type: primary
 section: servers
 kind: tool
 signals: [stars, contributors, active]
 threats: [T1, T2]
+stars: 123
+contributors: 9
+pushed_at: '2026-11-12T09:19:10Z'
+archived: false
+license: Apache-2.0
 description: Spring AI library adding OAuth 2 resource server, API key and client-side authorization to MCP servers and clients, plus Spring Authorization Server extensions including DCR, deprecated in the 2026-07-28 spec.

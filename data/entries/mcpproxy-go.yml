@@ -4,10 +4,15 @@ author: smart-mcp-proxy
 author_kind: independent
 published: '2025-06-18'
 added: '2026-10-28'
-last_verified: '2026-10-28'
+last_verified: '2026-11-16'
 source_type: primary
 section: gateways_and_proxies
 kind: tool
 signals: [stars, contributors, active]
 threats: [T4, T2, T12]
+stars: 422
+contributors: 38
+pushed_at: '2026-11-15T10:22:57Z'
+archived: false
+license: MIT
 description: Local proxy that aggregates MCP servers behind one endpoint, quarantining new servers for review against tool poisoning, with scanner integration, tool-call checks and an activity log; sends anonymous telemetry by default.

@@ -5,10 +5,15 @@ org: Lasso Security
 author_kind: vendor_lab
 published: 2025-04-14
 added: 2026-10-28
-last_verified: 2026-10-28
+last_verified: '2026-11-16'
 source_type: primary
 section: gateways_and_proxies
 kind: tool
 signals: [stars, contributors]
 threats: [T5, T11, T3]
+stars: 403
+contributors: 5
+pushed_at: '2026-01-22T13:07:00Z'
+archived: false
+license: MIT
 description: Plugin-based gateway that proxies other MCP servers, with guardrail plugins such as token masking and a scanner that checks server reputation before loading.

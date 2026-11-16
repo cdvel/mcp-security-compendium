@@ -5,10 +5,15 @@ org: Model Context Protocol
 author_kind: project_maintainers
 published: '2025-10-01'
 added: '2026-10-28'
-last_verified: '2026-10-28'
+last_verified: '2026-11-16'
 source_type: primary
 section: specification_and_authorization
 kind: spec
 signals: [spec_maintainers, stars]
 threats: [T1, T2]
+stars: 177
+contributors: 7
+pushed_at: '2026-11-10T14:54:22Z'
+archived: false
+license: MIT
 description: Official optional MCP authorization extensions, currently Enterprise-Managed Authorization and OAuth Client Credentials, versioned against core protocol revisions.

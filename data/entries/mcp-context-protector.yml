@@ -5,7 +5,7 @@ org: Trail of Bits
 author_kind: research_lab
 published: '2025-07-28'
 added: '2026-10-28'
-last_verified: '2026-10-28'
+last_verified: '2026-11-16'
 source_type: primary
 section: clients_and_hosts
 kind: tool
@@ -13,4 +13,9 @@ signals: [research_lab, contributors]
 threats: [T4, T6]
 sources:
 - https://blog.trailofbits.com/2025/07/28/we-built-the-security-layer-mcp-always-needed/
+stars: 228
+contributors: 5
+pushed_at: '2026-04-14T12:07:30Z'
+archived: true
+license: Apache-2.0
 description: Wrapper between an MCP client and server that pins server configuration on first use, blocks unapproved changes, sanitizes ANSI control characters and can quarantine tool responses flagged by a guardrail provider.

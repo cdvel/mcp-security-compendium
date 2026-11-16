@@ -4,10 +4,15 @@ author: Kapil Duraphe
 author_kind: independent
 published: "2025-05-29"
 added: "2026-10-28"
-last_verified: "2026-10-28"
+last_verified: '2026-11-16'
 source_type: primary
 section: servers
 kind: tool
 signals: [stars, contributors]
 threats: [T4, T3, T5]
+stars: 140
+contributors: 5
+pushed_at: '2026-11-10T06:26:34Z'
+archived: false
+license: MIT
 description: Pattern-based static scanner for MCP server code and tool definitions that flags hardcoded credentials, tool poisoning, parameter and prompt injection, ANSI escapes and input-validation issues.
