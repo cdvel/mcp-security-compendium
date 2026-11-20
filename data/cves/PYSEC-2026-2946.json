@@ -2,7 +2,7 @@
   "schema_version": "1.9.2",
   "id": "PYSEC-2026-2946",
   "published": "2026-07-13T14:36:52.273166Z",
-  "modified": "2026-11-18T05:00:04.930320114Z",
+  "modified": "2026-11-20T12:00:02.407855688Z",
   "aliases": [
     "CVE-2026-56074",
     "GHSA-ffp3-3562-8cv3"
@@ -746,7 +746,9 @@
         "1.7.6",
         "1.7.7",
         "1.7.8",
-        "1.7.9"
+        "1.7.9",
+        "1.8.0",
+        "1.8.1"
       ],
       "database_specific": {
         "source": "https://github.com/pypa/advisory-database/blob/main/vulns/praisonaiagents/PYSEC-2026-2946.yaml"
