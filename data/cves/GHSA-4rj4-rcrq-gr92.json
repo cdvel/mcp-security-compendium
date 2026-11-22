@@ -57,8 +57,8 @@
     "github_reviewed_at": "2026-11-19T22:17:05Z",
     "nvd_published_at": null,
     "severity": "MODERATE",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Unescaped backslashes in tool arguments let attackers break out of JavaScript string literals and run code in the page."
   },
   "severity": [
     {

@@ -64,8 +64,8 @@
     "github_reviewed_at": "2026-11-19T20:36:31Z",
     "nvd_published_at": "2026-11-18T22:17:22Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Write tools exempted absolute paths from repository confinement, allowing arbitrary file writes and code execution."
   },
   "severity": [
     {

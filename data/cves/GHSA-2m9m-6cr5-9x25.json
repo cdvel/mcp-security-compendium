@@ -140,8 +140,8 @@
     "github_reviewed_at": "2026-11-19T00:46:38Z",
     "nvd_published_at": "2026-11-18T20:19:10Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Write tools interpolated table names and WHERE clauses into T-SQL, allowing SQL injection."
   },
   "severity": [
     {

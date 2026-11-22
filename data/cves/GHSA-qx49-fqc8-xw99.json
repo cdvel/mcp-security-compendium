@@ -165,8 +165,8 @@
     "github_reviewed_at": "2026-11-19T22:45:40Z",
     "nvd_published_at": "2026-11-16T21:17:20Z",
     "severity": "HIGH",
-    "component": "servers",
-    "triage": "pending"
+    "component": "clients_and_hosts",
+    "summary_short": "The OAuth client let the MCP server choose where credentials were sent, leaking client secrets and authorization codes."
   },
   "severity": [
     {

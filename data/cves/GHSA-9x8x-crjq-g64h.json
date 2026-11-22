@@ -111,8 +111,8 @@
     "github_reviewed_at": "2026-11-20T00:12:51Z",
     "nvd_published_at": "2026-11-19T17:18:59Z",
     "severity": "CRITICAL",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Management routes lacked Host and Origin validation, so DNS rebinding let websites hijack the Jupyter backend."
   },
   "severity": [
     {

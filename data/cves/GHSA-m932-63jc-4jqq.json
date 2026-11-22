@@ -71,8 +71,8 @@
     "github_reviewed_at": "2026-11-19T22:48:33Z",
     "nvd_published_at": "2026-11-18T17:17:37Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "The default SSE transport had no authentication, letting any client invoke Kubernetes tools."
   },
   "severity": [
     {

@@ -111,8 +111,8 @@
     "github_reviewed_at": "2026-11-20T00:12:14Z",
     "nvd_published_at": "2026-11-19T17:18:59Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Management routes on the HTTP transport skipped token authentication, letting unauthenticated callers redirect the Jupyter backend."
   },
   "severity": [
     {

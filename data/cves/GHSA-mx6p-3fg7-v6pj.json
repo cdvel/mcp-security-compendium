@@ -64,8 +64,8 @@
     "github_reviewed_at": "2026-11-19T20:41:18Z",
     "nvd_published_at": "2026-11-18T23:17:21Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Missing Host and Origin validation let a public website drive the user's vault through DNS rebinding."
   },
   "severity": [
     {

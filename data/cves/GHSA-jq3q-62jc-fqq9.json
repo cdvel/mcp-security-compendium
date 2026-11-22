@@ -67,8 +67,8 @@
     "github_reviewed_at": "2026-11-16T22:09:06Z",
     "nvd_published_at": null,
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Tool parameters were interpolated into shell commands, allowing arbitrary command execution on the host."
   },
   "severity": [
     {

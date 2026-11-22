@@ -796,8 +796,8 @@
     "github_reviewed_at": "2026-05-11T13:58:47Z",
     "nvd_published_at": "2026-05-08T14:16:46Z",
     "severity": "CRITICAL",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Rules and workflow tools joined caller-supplied paths without containment, enabling path traversal and code execution through .pth files."
   },
   "severity": [
     {

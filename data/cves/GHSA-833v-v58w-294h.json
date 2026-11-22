@@ -73,8 +73,8 @@
     "github_reviewed_at": "2026-11-19T20:38:35Z",
     "nvd_published_at": "2026-11-18T20:19:13Z",
     "severity": "CRITICAL",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "HTTP server accepted attacker-controlled Host and Origin headers, so DNS rebinding let websites invoke tools."
   },
   "severity": [
     {

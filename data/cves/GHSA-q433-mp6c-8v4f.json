@@ -72,8 +72,8 @@
     "github_reviewed_at": "2026-11-19T22:25:53Z",
     "nvd_published_at": "2026-11-18T17:17:38Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Read-only mode checked only for a leading SELECT, so statement chaining and ATTACH allowed database writes."
   },
   "severity": [
     {

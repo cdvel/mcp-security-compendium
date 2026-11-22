@@ -88,8 +88,8 @@
     "github_reviewed_at": "2026-06-26T21:05:43Z",
     "nvd_published_at": "2026-06-18T21:16:29Z",
     "severity": "CRITICAL",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "Default HTTP mode bound to all interfaces with authentication disabled, exposing tools to unauthenticated callers."
   },
   "severity": [
     {

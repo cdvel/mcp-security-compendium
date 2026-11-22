@@ -118,8 +118,8 @@
     "github_reviewed_at": "2026-04-01T23:20:00Z",
     "nvd_published_at": "2026-04-03T23:17:05Z",
     "severity": "CRITICAL",
-    "component": "",
-    "triage": "pending"
+    "component": "clients_and_hosts",
+    "summary_short": "The --mcp argument was split and run as a process without validation, allowing arbitrary command execution."
   },
   "severity": [
     {

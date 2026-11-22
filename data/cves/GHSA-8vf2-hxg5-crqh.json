@@ -67,8 +67,8 @@
     "github_reviewed_at": "2026-11-16T22:17:32Z",
     "nvd_published_at": "2026-11-16T17:17:31Z",
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "The start tool passed an unvalidated pod_regex into a command line, allowing argument injection and cluster takeover."
   },
   "severity": [
     {

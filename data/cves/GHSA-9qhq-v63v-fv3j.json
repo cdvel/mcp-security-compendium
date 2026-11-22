@@ -776,8 +776,8 @@
     "github_reviewed_at": "2026-04-17T22:23:50Z",
     "nvd_published_at": "2026-05-08T14:16:33Z",
     "severity": "CRITICAL",
-    "component": "",
-    "triage": "pending"
+    "component": "clients_and_hosts",
+    "summary_short": "The fix for MCP command injection added no executable allowlist, so arbitrary commands still ran."
   },
   "severity": [
     {

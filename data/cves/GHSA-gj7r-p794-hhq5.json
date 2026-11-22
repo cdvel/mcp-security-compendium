@@ -68,8 +68,8 @@
     "github_reviewed_at": "2026-11-16T22:18:58Z",
     "nvd_published_at": "2026-11-16T17:17:31Z",
     "severity": "MODERATE",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "The download tool wrote fetched bytes to an unvalidated destination path, allowing arbitrary file writes."
   },
   "severity": [
     {

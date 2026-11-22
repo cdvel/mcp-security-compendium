@@ -76,8 +76,8 @@
     "github_reviewed_at": "2026-07-06T17:41:03Z",
     "nvd_published_at": null,
     "severity": "HIGH",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "The HTTP MCP endpoint accepted unauthenticated tool calls and executed modules, allowing remote command execution."
   },
   "severity": [
     {

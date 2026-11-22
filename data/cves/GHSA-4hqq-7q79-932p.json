@@ -86,8 +86,8 @@
     "github_reviewed_at": "2025-09-15T21:38:22Z",
     "nvd_published_at": "2025-09-15T14:15:44Z",
     "severity": "CRITICAL",
-    "component": "",
-    "triage": "pending"
+    "component": "servers",
+    "summary_short": "The kubectl endpoint built shell commands from user input, allowing OS command injection even in read-only mode."
   },
   "severity": [
     {
