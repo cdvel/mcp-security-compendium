@@ -6,7 +6,7 @@
 
 ![Entries verified 2026-11-14](https://img.shields.io/badge/entries_verified-2026--11--14-2ea44f) ![Advisories updated](https://img.shields.io/github/last-commit/cdvel/mcp-security-compendium?path=data%2Fcves&label=advisories%20updated) ![Nightly CVE watch status](https://img.shields.io/github/actions/workflow/status/cdvel/mcp-security-compendium/cves.yml?label=nightly%20cve%20watch)
 
-62 entries · 91 advisories · 27 malicious packages · CC BY 4.0
+62 entries · 112 advisories · 34 malicious packages · CC BY 4.0
 
 [Start here](#start-here) · [Contents](#contents) · [CVE tracker](#cve-tracker) · [Methodology](METHODOLOGY.md) · [Contributing](CONTRIBUTING.md)
 
@@ -36,7 +36,7 @@ MCP security material is spread across spec pages, lab write-ups, papers and adv
 - [Registries and supply chain](#registries-and-supply-chain) (5)
 - [Threat models and research](#threat-models-and-research) (14)
 - [Incidents](#incidents) (10)
-- [CVE tracker](#cve-tracker) (91)
+- [CVE tracker](#cve-tracker) (112)
 
 ## Start here
 
@@ -148,30 +148,30 @@ Documented exploitation or disclosure involving MCP deployments.
 
 ## CVE tracker
 
-The 20 newest of 91 advisories. The full list, and 27 malicious packages, are in [CVES.md](CVES.md).
+The 20 newest of 112 advisories. The full list, and 34 malicious packages, are in [CVES.md](CVES.md).
 
 | ID | Aliases | Package | Component | Severity | Published | Summary |
 |---|---|---|---|---|---|---|
+| [GHSA-9x8x-crjq-g64h](https://osv.dev/vulnerability/GHSA-9x8x-crjq-g64h) | CVE-2026-77359 | jupyter-mcp-server | Servers | critical | 2026-11-20 | Management routes lacked Host and Origin validation, so DNS rebinding let websites hijack the Jupyter backend. |
+| [GHSA-24pw-rf5p-mgp7](https://osv.dev/vulnerability/GHSA-24pw-rf5p-mgp7) | CVE-2026-77318 | jupyter-mcp-server | Servers | high | 2026-11-20 | Management routes on the HTTP transport skipped token authentication, letting unauthenticated callers redirect the Jupyter backend. |
+| [GHSA-m932-63jc-4jqq](https://osv.dev/vulnerability/GHSA-m932-63jc-4jqq) | CVE-2026-130007 | github.com/reza-gholizade/k8s-mcp-server | Servers | high | 2026-11-19 | The default SSE transport had no authentication, letting any client invoke Kubernetes tools. |
+| [GHSA-qx49-fqc8-xw99](https://osv.dev/vulnerability/GHSA-qx49-fqc8-xw99) | CVE-2026-115563 | mcp | Clients and hosts | high | 2026-11-19 | The OAuth client let the MCP server choose where credentials were sent, leaking client secrets and authorization codes. |
+| [GHSA-q433-mp6c-8v4f](https://osv.dev/vulnerability/GHSA-q433-mp6c-8v4f) | CVE-2026-130008 | github.com/StacklokLabs/sqlite-mcp | Servers | high | 2026-11-19 | Read-only mode checked only for a leading SELECT, so statement chaining and ATTACH allowed database writes. |
+| [GHSA-4rj4-rcrq-gr92](https://osv.dev/vulnerability/GHSA-4rj4-rcrq-gr92) |  | safari-mcp | Servers | moderate | 2026-11-19 | Unescaped backslashes in tool arguments let attackers break out of JavaScript string literals and run code in the page. |
+| [GHSA-mx6p-3fg7-v6pj](https://osv.dev/vulnerability/GHSA-mx6p-3fg7-v6pj) | CVE-2026-77283 | obsidian-sync-mcp | Servers | high | 2026-11-19 | Missing Host and Origin validation let a public website drive the user's vault through DNS rebinding. |
+| [GHSA-833v-v58w-294h](https://osv.dev/vulnerability/GHSA-833v-v58w-294h) | CVE-2026-76807 | @doist/todoist-mcp | Servers | critical | 2026-11-19 | HTTP server accepted attacker-controlled Host and Origin headers, so DNS rebinding let websites invoke tools. |
+| [GHSA-w42c-h7hr-f67p](https://osv.dev/vulnerability/GHSA-w42c-h7hr-f67p) | CVE-2026-62964 | github.com/zzet/gortex | Servers | high | 2026-11-19 | Write tools exempted absolute paths from repository confinement, allowing arbitrary file writes and code execution. |
+| [GHSA-vg83-hcp4-5qcc](https://osv.dev/vulnerability/GHSA-vg83-hcp4-5qcc) | CVE-2026-75518 | @apireno/domshell | Servers | moderate | 2026-11-19 | A tool that evaluates JavaScript was classed read-only, so it ran without write permission and misled approval prompts. |
+| [GHSA-2m9m-6cr5-9x25](https://osv.dev/vulnerability/GHSA-2m9m-6cr5-9x25) | CVE-2026-63129 | @connorbritain/mssql-mcp-core, @connorbritain/mssql-mcp-reader, @connorbritain/mssql-mcp-server, @connorbritain/mssql-mcp-writer | Servers | high | 2026-11-19 | Write tools interpolated table names and WHERE clauses into T-SQL, allowing SQL injection. |
+| [GHSA-gj7r-p794-hhq5](https://osv.dev/vulnerability/GHSA-gj7r-p794-hhq5) | CVE-2026-129235 | github.com/kubeshark/kubeshark | Servers | moderate | 2026-11-16 | The download tool wrote fetched bytes to an unvalidated destination path, allowing arbitrary file writes. |
+| [GHSA-8vf2-hxg5-crqh](https://osv.dev/vulnerability/GHSA-8vf2-hxg5-crqh) | CVE-2026-129236 | github.com/kubeshark/kubeshark | Servers | high | 2026-11-16 | The start tool passed an unvalidated pod_regex into a command line, allowing argument injection and cluster takeover. |
+| [GHSA-jq3q-62jc-fqq9](https://osv.dev/vulnerability/GHSA-jq3q-62jc-fqq9) | CVE-2026-68934 | code-review-mcp-server | Servers | high | 2026-11-16 | Tool parameters were interpolated into shell commands, allowing arbitrary command execution on the host. |
 | [GHSA-q6jf-24jf-m3cg](https://osv.dev/vulnerability/GHSA-q6jf-24jf-m3cg) | CVE-2026-120792 | @microsoft/aspire-cli, @microsoft/aspire-cli-linux-arm64, @microsoft/aspire-cli-linux-musl-x64, @microsoft/aspire-cli-linux-x64, @microsoft/aspire-cli-osx-arm64, @microsoft/aspire-cli-osx-x64, Aspire.Cli, Aspire.Cli.linux-arm64, Aspire.Cli.linux-musl-x64, Aspire.Cli.linux-x64, Aspire.Cli.osx-arm64, Aspire.Cli.osx-x64 | Clients and hosts | high | 2026-11-11 | Deprecated MCP configuration scanner wrote configuration content to insecure temporary files. |
 | [GHSA-5m6c-38r8-5w76](https://osv.dev/vulnerability/GHSA-5m6c-38r8-5w76) | CVE-2026-102943 | github.com/dagu-org/dagu/v2 | Servers | moderate | 2026-11-10 | MCP tools bypassed the path containment fix, allowing YAML file reads outside the workspace. |
 | [GHSA-85gg-2gfq-q95m](https://osv.dev/vulnerability/GHSA-85gg-2gfq-q95m) | CVE-2026-87008 | code-graph-rag | Servers | high | 2026-11-09 | Structural search and replace tools followed symlinks out of the project, allowing file reads and overwrites. |
 | [GHSA-9vhv-g5hf-m7m7](https://osv.dev/vulnerability/GHSA-9vhv-g5hf-m7m7) | CVE-2026-102610 | fast-agent-mcp | Servers | moderate | 2026-11-09 | The serve command bound to all interfaces without authentication; with shell access enabled, that allowed remote command execution. |
 | [GHSA-wchh-mrv2-5h4q](https://osv.dev/vulnerability/GHSA-wchh-mrv2-5h4q) | CVE-2026-86041 | github.com/mayswind/ezbookkeeping | Servers | moderate | 2026-11-09 | Spoofed X-Forwarded-For headers bypassed the MCP and API token IP allowlist. |
 | [GHSA-vvr2-h2jp-838m](https://osv.dev/vulnerability/GHSA-vvr2-h2jp-838m) | CVE-2026-77604 | code-graph-rag | Servers | high | 2026-11-09 | Paginated read_file MCP tool allowed path traversal and arbitrary file reads. |
-| [GHSA-h7c4-q426-7jh9](https://osv.dev/vulnerability/GHSA-h7c4-q426-7jh9) | CVE-2026-76893 | @tsparticles/mcp-server | Servers | moderate | 2026-11-09 | One anonymous client could take the shared HTTP session and lock out all other clients. |
-| [GHSA-4p8p-pjpq-2w7h](https://osv.dev/vulnerability/GHSA-4p8p-pjpq-2w7h) | CVE-2026-76892 | @tsparticles/mcp-server | Servers | high | 2026-11-09 | One malformed JSON request crashed the HTTP server process. |
-| [GHSA-447x-qqwf-m7xq](https://osv.dev/vulnerability/GHSA-447x-qqwf-m7xq) | CVE-2026-63655 | @tsparticles/mcp-server | Servers | high | 2026-11-09 | HTTP mode buffered request bodies without a size limit, allowing remote denial of service. |
-| [GO-2026-6911](https://osv.dev/vulnerability/GO-2026-6911) |  | github.com/mark3labs/mcp-go | Clients and hosts |  | 2026-11-05 | Client followed redirects to any host and sent OAuth tokens and custom headers along. |
-| [RUSTSEC-2026-0462](https://osv.dev/vulnerability/RUSTSEC-2026-0462) |  | rmcp | Clients and hosts |  | 2026-11-05 | Streamable HTTP clients buffered response bodies without limit. |
-| [GHSA-q344-5v34-gm84](https://osv.dev/vulnerability/GHSA-q344-5v34-gm84) | CVE-2026-62264 | @sylphx/pdf-reader-mcp | Servers | high | 2026-10-29 | HTTP transport ignored the configured API key and accepted unauthenticated requests. |
-| [GHSA-4mfg-r38w-w8fg](https://osv.dev/vulnerability/GHSA-4mfg-r38w-w8fg) |  | mcp-sanitizer | Servers | high | 2026-10-28 | URL sanitizer let localhost and IPv6 loopback addresses through, enabling SSRF from MCP tools. |
-| [GHSA-7w82-6f9j-v9jp](https://osv.dev/vulnerability/GHSA-7w82-6f9j-v9jp) |  | mcp-sanitizer | Servers | high | 2026-10-28 | File path sanitizer allowed any path under user home directories. |
-| [GHSA-c8r8-95hg-mp34](https://osv.dev/vulnerability/GHSA-c8r8-95hg-mp34) | CVE-2026-60083 | github.com/siyuan-note/siyuan/kernel | Servers | moderate | 2026-10-27 | MCP file tool's blocklist missed sensitive files the HTTP API protects, exposing publish-mode passwords. |
-| [GHSA-fq6x-j3g6-xx83](https://osv.dev/vulnerability/GHSA-fq6x-j3g6-xx83) | CVE-2026-106765 | @rog0x/mcp-docker-tools | Servers | high | 2026-10-23 | Arbitrary code execution through the image list handler. |
-| [GHSA-2vq3-mpmf-9xgr](https://osv.dev/vulnerability/GHSA-2vq3-mpmf-9xgr) | CVE-2026-106763 | @justice8096/sagemath-mcp-server | Servers | high | 2026-10-23 | Arbitrary code execution through its shell-escaping and code-sanitizing functions. |
-| [GHSA-jwc4-922r-f2rw](https://osv.dev/vulnerability/GHSA-jwc4-922r-f2rw) | CVE-2026-106764 | @rog0x/mcp-git-tools | Servers | high | 2026-10-23 | Arbitrary code execution through base branch resolution. |
-| [RUSTSEC-2026-0457](https://osv.dev/vulnerability/RUSTSEC-2026-0457) |  | rmcp | Clients and hosts |  | 2026-10-22 | OAuth client SSRF filter checked host strings, not resolved addresses. |
-| [RUSTSEC-2026-0461](https://osv.dev/vulnerability/RUSTSEC-2026-0461) |  | rmcp | Servers |  | 2026-10-20 | Server transport cached tool lookups without limit, including unknown tool names. |
 
 ---
 
